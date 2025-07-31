@@ -1,0 +1,38 @@
+import Header2 from "@/components/headers/Header2";
+import Topbar from "@/components/headers/Topbar";
+import Contests from "@/components/homes/home-3/Contests";
+import Contests2 from "@/components/homes/home-3/Contests2";
+import Tips from "@/components/homes/home-3/Tips";
+import Hero from "@/components/homes/home-3/Hero";
+import Process from "@/components/homes/home-3/Process";
+import Winners from "@/components/homes/home-3/Winners";
+import React from "react";
+import Contests3 from "@/components/homes/home-3/Contests3";
+import Cta from "@/components/common/Cta";
+import Footer1 from "@/components/footers/Footer1";
+
+import MetaComponent from "@/components/common/MetaComponent";
+const metadata = {
+  title: "Home 03 || Lotex - Online Lotto & Lottery Reactjs Template",
+  description: "Lotex - Online Lotto & Lottery Reactjs Template",
+};
+export default function Homepage3() {
+  return (
+    <>
+      <MetaComponent meta={metadata} />
+      <Topbar />
+      <Header2 />
+      <Hero />
+      <div className="main-content">
+        <Contests />
+        <Contests2 />
+        <Process />
+        <Winners />
+        <Tips />
+        <Contests3 />
+        <Cta />
+      </div>
+      <Footer1 />
+    </>
+  );
+}
