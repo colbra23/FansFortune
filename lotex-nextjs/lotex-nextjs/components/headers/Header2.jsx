@@ -19,13 +19,13 @@ export default function Header2() {
               <div className="header-inner-wrap">
                 <div className="header-logo">
                   <Link href={`/`}>
-                    <Image
+                   {/* <Image
                       alt=""
                       data-retina="/images/logo/logo@2x.png"
                       src="/images/logo/logo.png"
                       width={170}
                       height={60}
-                    />
+                    /> */}
                   </Link>
                 </div>
                 <nav className="main-menu">
@@ -62,14 +62,14 @@ export default function Header2() {
               <div className="inner-mobile-nav">
                 <div className="top-nav-mobile">
                   <Link href={`/`} rel="home" className="main-logo">
-                    <Image
+                   {/* <Image
                       id="mobile-logo_header"
                       alt=""
                       data-retina="/images/logo/logo@2x.png"
                       src="/images/logo/logo.png"
                       width={170}
                       height={60}
-                    />
+                    /> */}
                   </Link>
                   <div className="mobile-nav-close" onClick={closeMobileMenu}>
                     <i className="icon-close" />
