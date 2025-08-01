@@ -8,13 +8,13 @@ export default function Hero() {
       {/* page-title-home-1 */}
       <div className="page-title-home-1">
         {/* <Image class="item-page-title-home-1"  alt=""    src="/images/item/page-title-1.png" width="1920" height="1018" /> */}
-        <Image
+       {/* <Image
           className="coin item-1"
           alt=""
           src="/images/item/coin-3.png"
           width={98}
           height={109}
-        />
+        /> 
         <Image
           className="coin item-2"
           alt=""
@@ -63,7 +63,7 @@ export default function Hero() {
           src="/images/item/ball-1.png"
           width={177}
           height={176}
-        />
+        /> */}
         <div className="tf-container">
           <div className="row">
             <div className="col-lg-12">
@@ -89,12 +89,12 @@ export default function Hero() {
                   Play form $25 <i className="icon-right" />
                 </Link>
                 <div className="item-car">
-                  <Image
+                 {/* <Image
                     alt=""
                     src="/images/item/page-title-car.png"
                     width={1316}
                     height={608}
-                  />
+                  /> */}
                 </div>
               </div>
             </div>
