@@ -21,22 +21,22 @@ export default function Cta() {
               <div className="bottom wow fadeInUp">
                 <div className="btn-dowload">
                   <a href="#">
-                    <Image
+                  {/*  <Image
                       alt=""
                       src="/images/item/Android.jpg"
                       width={519}
                       height={174}
-                    />
+                    /> */}
                   </a>
                 </div>
                 <div className="btn-dowload">
                   <a href="#">
-                    <Image
+                  {/*  <Image
                       alt=""
                       src="/images/item/IOS.jpg"
                       width={519}
                       height={174}
-                    />
+                    /> */}
                   </a>
                 </div>
               </div>
@@ -45,36 +45,36 @@ export default function Cta() {
                 data-wow-delay="0.3s"
                 data-wow-duration="4s"
               >
-                <Image
+              {/*  <Image
                   alt=""
                   src="/images/item/phone.png"
                   width={1085}
                   height={320}
-                />
+                /> */}
               </div>
               <div
                 className="item coin-1 wow fadeInDown"
                 data-wow-delay="0.5s"
                 data-wow-duration="3s"
               >
-                <Image
+              {/*  <Image
                   alt=""
                   src="/images/item/coin-1.png"
                   width={50}
                   height={50}
-                />
+                /> */}
               </div>
               <div
                 className="item coin-2 wow fadeInLeft"
                 data-wow-delay="1s"
                 data-wow-duration="3s"
               >
-                <Image
+               {/* <Image
                   alt=""
                   src="/images/item/coin-2.png"
                   width={55}
                   height={54}
-                />
+                /> */}
               </div>
             </div>
           </section>
