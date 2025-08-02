@@ -196,11 +196,10 @@ export default function PrizeDetails() {
   const handleEnterContest = () => {
     const tokenCost = getTokenCost(selectedPrize.id);
     if (hasEnoughTokens(selectedPrize.id)) {
-      // Deduct tokens and enter contest
-      setUserTokens(prev => prev - tokenCost);
+      // Close the modal and navigate to contest details page
       closeModal();
-      // Here you would typically redirect to the contest entry form
-      alert(`Contest entered! ${tokenCost} tokens deducted. Remaining tokens: ${userTokens - tokenCost}`);
+      // Navigate to the contest entry form
+      window.location.href = `/contest-details/${selectedPrize.id}`;
     }
   };
 
