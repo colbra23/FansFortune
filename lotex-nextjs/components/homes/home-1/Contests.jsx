@@ -111,17 +111,19 @@ export default function Contests() {
                       <div className="content">
                         <div className="heading">
                           <h4 className="title fw-9">
-                            <span
-                              onClick={(e) => {
-                                e.preventDefault();
-                                if (typeof window !== 'undefined' && window.openPrizeModal) {
-                                  window.openPrizeModal(card.id);
-                                }
-                              }}
-                              style={{ cursor: 'pointer', color: 'var(--White)' }}
-                            >
-                              {card.title}
-                            </span>
+                            <Link href={`/contest-details/${card.id}`}>
+                              <span
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  if (typeof window !== 'undefined' && window.openPrizeModal) {
+                                    window.openPrizeModal(card.id);
+                                  }
+                                }}
+                                style={{ cursor: 'pointer', color: 'var(--White)' }}
+                              >
+                                {card.title}
+                              </span>
+                            </Link>
                           </h4>
                           <ul className="sub-title-list">
                             <li className="item">
