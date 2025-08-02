@@ -1,7 +1,7 @@
 export const contestData = [
   {
     id: 1,
-   title: "Apple iPhone 15 Pro Max",
+    title: "Apple iPhone 15 Pro Max",
     imgSrc: "/images/component/contest-1.jpg",
     width: 700,
     height: 460,
@@ -14,7 +14,7 @@ export const contestData = [
   },
   {
     id: 2,
-   title: "Tesla Model 3",
+    title: "Tesla Model 3",
     imgSrc: "/images/component/contest-2.jpg",
     width: 700,
     height: 460,
@@ -27,7 +27,7 @@ export const contestData = [
   },
   {
     id: 3,
-   title: "MacBook Pro 16-inch",
+    title: "MacBook Pro 16-inch",
     imgSrc: "/images/component/contest-4.jpg",
     width: 525,
     height: 345,
@@ -40,7 +40,7 @@ export const contestData = [
   },
   {
     id: 4,
-   title: "Rolex Submariner",
+    title: "Rolex Submariner",
     imgSrc: "/images/component/contest-3.jpg",
     width: 700,
     height: 460,
@@ -53,7 +53,7 @@ export const contestData = [
   },
   {
     id: 5,
-   title: "Cash Prize $50,000",
+    title: "Cash Prize $50,000",
     imgSrc: "/images/section/scratchcards-2.jpg",
     width: 700,
     height: 460,
@@ -66,7 +66,7 @@ export const contestData = [
   },
   {
     id: 6,
-    title: "90 Bingo",
+    title: "Dream Car Contest",
     imgSrc: "/images/section/scratchcards-3.jpg",
     width: 700,
     height: 460,
@@ -79,7 +79,7 @@ export const contestData = [
   },
   {
     id: 7,
-    title: "90 Bingo",
+    title: "Luxury Watch Giveaway",
     imgSrc: "/images/component/contest-6.jpg",
     width: 700,
     height: 460,
@@ -92,7 +92,7 @@ export const contestData = [
   },
   {
     id: 8,
-    title: "90 Bingo",
+    title: "Tech Bundle Prize",
     imgSrc: "/images/section/scratchcards-1.jpg",
     width: 700,
     height: 460,
@@ -105,7 +105,7 @@ export const contestData = [
   },
   {
     id: 9,
-    title: "90 Bingo",
+    title: "Gaming Setup Contest",
     imgSrc: "/images/component/contest-7.jpg",
     width: 700,
     height: 460,
