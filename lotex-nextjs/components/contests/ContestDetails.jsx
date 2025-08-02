@@ -7,7 +7,7 @@ import { useState } from "react";
 import ContestEntryForm from "./ContestEntryForm";
 
 // Mock user token balance - in a real app, this would come from your user state/API
-const USER_TOKEN_BALANCE = 75; // Example: user has 75 tokens
+const INITIAL_USER_TOKEN_BALANCE = 75; // Example: user has 75 tokens
 
 // Token costs for each contest
 const CONTEST_TOKEN_COSTS = {
@@ -22,7 +22,7 @@ export default function ContestDetails({ contest }) {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [showTokenPurchaseFlow, setShowTokenPurchaseFlow] = useState(false);
   const [showSealedMessage, setShowSealedMessage] = useState(false);
-  const [userTokens, setUserTokens] = useState(USER_TOKEN_BALANCE);
+  const [userTokens, setUserTokens] = useState(INITIAL_USER_TOKEN_BALANCE);
 
   const handleFormSubmissionSuccess = () => {
     const prizeId = contest.id || 1;
@@ -44,8 +44,10 @@ export default function ContestDetails({ contest }) {
     // After purchasing tokens, show the sealed message
     setShowTokenPurchaseFlow(false);
     setShowSealedMessage(true);
-    // Update user tokens (in real app, this would come from API)
-    setUserTokens(prev => prev + 500); // Example: add tokens from purchase
+    // Update user tokens to ensure they have enough for this contest
+    const prizeId = contest.id || 1;
+    const prizeTokenCost = CONTEST_TOKEN_COSTS[prizeId] || 100;
+    setUserTokens(prev => Math.max(prev + 500, prizeTokenCost + 50)); // Ensure they have enough plus some extra
   };
 
   return (
