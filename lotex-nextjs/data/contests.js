@@ -9,7 +9,7 @@ export const contestData = [
     contestNo: "Lo43",
     remaining: 9320,
     winAmount: 100000,
-    playCost: 25,
+    tokenCost: 100,
     categories: ["Art", "Music"],
   },
   {
@@ -22,7 +22,7 @@ export const contestData = [
     contestNo: "Lo43",
     remaining: 9320,
     winAmount: 100000,
-    playCost: 25,
+    tokenCost: 200,
     categories: ["Art", "Photography"],
   },
   {
@@ -35,7 +35,7 @@ export const contestData = [
     contestNo: "Lo43",
     remaining: 9320,
     winAmount: 100000,
-    playCost: 25,
+    tokenCost: 75,
     categories: ["Photography", "Music"],
   },
   {
@@ -48,7 +48,7 @@ export const contestData = [
     contestNo: "Lo43",
     remaining: 9320,
     winAmount: 100000,
-    playCost: 25,
+    tokenCost: 150,
     categories: ["Art", "Music"],
   },
   {
@@ -61,7 +61,7 @@ export const contestData = [
     contestNo: "Lo43",
     remaining: 9320,
     winAmount: 100000,
-    playCost: 25,
+    tokenCost: 50,
     categories: ["Art", "Photography"],
   },
   {
@@ -74,7 +74,7 @@ export const contestData = [
     contestNo: "Lo43",
     remaining: 9320,
     winAmount: 100000,
-    playCost: 25,
+    tokenCost: 25,
     categories: ["Art", "Photography", "Music"],
   },
   {
@@ -87,7 +87,7 @@ export const contestData = [
     contestNo: "Lo43",
     remaining: 9320,
     winAmount: 100000,
-    playCost: 25,
+    tokenCost: 30,
     categories: ["Art", "Photography", "Music"],
   },
   {
@@ -100,7 +100,7 @@ export const contestData = [
     contestNo: "Lo43",
     remaining: 9320,
     winAmount: 100000,
-    playCost: 25,
+    tokenCost: 40,
     categories: ["Art", "Photography", "Music"],
   },
   {
@@ -113,7 +113,7 @@ export const contestData = [
     contestNo: "Lo43",
     remaining: 9320,
     winAmount: 100000,
-    playCost: 25,
+    tokenCost: 35,
     categories: ["Art", "Photography", "Music"],
   },
 ];

@@ -159,7 +159,7 @@ export default function Categories() {
                         href={`/contest-details/${item.id}`}
                         className="tf-btn"
                       >
-                        ${item.playCost} To play <i className="icon-right"> </i>
+                        {item.tokenCost} Tokens To Play <i className="icon-right"> </i>
                       </Link>
                     </div>
                   </div>

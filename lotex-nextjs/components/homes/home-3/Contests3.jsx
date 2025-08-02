@@ -89,7 +89,7 @@ export default function Contests3() {
                           href={`/contest-details/${card.id}`}
                           className="tf-btn"
                         >
-                          $25 To play <i className="icon-right"> </i>
+                          {card.tokenCost || 25} Tokens To Play <i className="icon-right"> </i>
                         </Link>
                       </div>
                     </div>

@@ -63,7 +63,7 @@ export default function FavoriteContests() {
                       <div className="heading">
                         <h4 className="title fw-9">
                           <Link href={`/contest-details/${card.id}`}>
-                            {card.title}
+                            {card.tokenCost || 25} Tokens To Play <i className="icon-right"> </i>
                           </Link>
                         </h4>
                         <ul className="sub-title-list">

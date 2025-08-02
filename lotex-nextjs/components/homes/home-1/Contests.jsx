@@ -138,7 +138,7 @@ export default function Contests() {
                             href={`/contest-details/${card.id}`}
                             className="tf-btn"
                           >
-                            ${card.playCost.toFixed(2)} To play{" "}
+                            {card.tokenCost} Tokens To Play{" "}
                             <i className="icon-right"> </i>
                           </Link>
                         </div>
