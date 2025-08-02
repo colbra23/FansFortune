@@ -118,6 +118,11 @@ a {
 }
 
 .contest-question-container {
+  background: var(--Bg-2);
+  border: 1px solid var(--Border);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 2rem;
   animation: slideIn 0.3s ease-in-out;
 }
 
@@ -135,6 +140,8 @@ a {
 .contest-question-header {
   text-align: center;
   margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--Border);
 }
 
 .contest-question-header h4 {
@@ -146,12 +153,12 @@ a {
 }
 
 .contest-question-type {
-  background: var(--Bg-2);
+  background: var(--Bg-5);
   padding: 0.5rem 1rem;
   border-radius: 999px;
   font-size: 14px;
   color: var(--Secondary);
-  border: 1px solid var(--Border);
+  border: 1px solid var(--Border-1);
 }
 
 .contest-options-grid {
