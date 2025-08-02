@@ -2,7 +2,7 @@ export const faqItems = [
   {
     id: 1,
     category: "About the Lotter",
-    question: "1. What canIdo ifIforgot my password?",
+    question: "1. What can I do if I forgot my password?",
     answer:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt consequat lectus, a pharetra ante semper ac. Fusce non tempus quam. Aenean varius fringilla aliquam. Nam at lacus et diam vestibulum sagittis. Fusce eget luctus risus. Maecenas in dignissim massa.",
   },
