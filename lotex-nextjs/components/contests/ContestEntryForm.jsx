@@ -248,22 +248,32 @@ export default function ContestEntryForm({ onSubmissionSuccess }) {
   };
 
   const handleSubmit = () => {
-    const tokenCost = 200; // Tesla contest cost - in real app, get from props
+    setShowSummary(false);
+    setShowSubmission(true);
     
-    if (userTokens >= tokenCost) {
-      // Player has enough tokens - show confirmation popup
-      setShowSubmitModal(true);
-    } else {
-      // Player needs tokens - set flag and open token purchase modal
-      sessionStorage.setItem('contestEntryInProgress', 'true');
-      const tokenModal = document.getElementById('tokenPurchaseModal');
-      if (tokenModal) {
-        import('bootstrap').then((bootstrap) => {
-          const modal = new bootstrap.Modal(tokenModal);
-          modal.show();
-        });
+    // Show padlock animation for 3 seconds, then show success
+    setTimeout(() => {
+      setShowSubmission(false);
+      // Call the parent callback to show the rest of the contest details
+      if (onSubmissionSuccess) {
+        onSubmissionSuccess();
       }
-    }
+    }, 3000);
+  };
+
+  const handleConfirmSubmit = () => {
+    setShowSubmitModal(false);
+    setShowSummary(false);
+    setShowSubmission(true);
+    
+    // Show padlock animation for 3 seconds, then show success
+    setTimeout(() => {
+      setShowSubmission(false);
+      // Call the parent callback to show the rest of the contest details
+      if (onSubmissionSuccess) {
+        onSubmissionSuccess();
+      }
+    }, 3000);
   };
 
   const getTotalScore = () => {

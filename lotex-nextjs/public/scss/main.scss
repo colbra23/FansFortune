@@ -1165,6 +1165,63 @@ a {
   background: linear-gradient(135deg, var(--Main-color), var(--Sub-color)) !important;
 }
 
+/* Contest Entry Sealed Styles */
+.contest-entry-sealed {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.sealed-content h4 {
+  color: var(--White);
+  font-size: 24px;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.sealed-message {
+  color: var(--Secondary);
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 2rem;
+}
+
+.sealed-actions {
+  margin-top: 2rem;
+}
+
+.padlock-container {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.lock-pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  border: 2px solid var(--Main-color);
+  border-radius: 50%;
+  animation: lockPulse 2s ease-in-out infinite;
+}
+
+@keyframes lockPulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 1;
+  }
+}
+
 /* Responsive Design for Prize Details */
 @media (max-width: 768px) {
   .prize-details-body {
