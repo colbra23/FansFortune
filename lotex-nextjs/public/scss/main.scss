@@ -1088,6 +1088,44 @@ a {
   min-width: 180px;
 }
 
+.token-balance-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: var(--Bg-5);
+  border-radius: 12px;
+  border: 1px solid var(--Border);
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.user-tokens {
+  color: var(--Main-color);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.contest-cost {
+  color: var(--Secondary);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.enter-contest-btn {
+  background: linear-gradient(135deg, #28a745, #20c997) !important;
+}
+
+.enter-contest-btn:hover {
+  background: linear-gradient(135deg, #218838, #1ea080) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+}
+
+.buy-tokens-btn {
+  background: linear-gradient(135deg, var(--Main-color), var(--Sub-color)) !important;
+}
+
 /* Responsive Design for Prize Details */
 @media (max-width: 768px) {
   .prize-details-body {

@@ -2,6 +2,18 @@
 import { useState } from "react";
 import Image from "next/image";
 
+// Mock user token balance - in a real app, this would come from your user state/API
+const USER_TOKEN_BALANCE = 150; // Example: user has 150 tokens
+
+// Token costs for each contest
+const CONTEST_TOKEN_COSTS = {
+  1: 100, // iPhone costs 100 tokens
+  2: 200, // Tesla costs 200 tokens  
+  3: 75,  // MacBook costs 75 tokens
+  4: 150, // Rolex costs 150 tokens
+  5: 50,  // Cash prize costs 50 tokens
+};
+
 const prizeDetails = {
   1: {
     id: 1,
@@ -142,6 +154,7 @@ const prizeDetails = {
 export default function PrizeDetails() {
   const [selectedPrize, setSelectedPrize] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [userTokens, setUserTokens] = useState(USER_TOKEN_BALANCE);
 
   const openModal = (prizeId) => {
     const prize = prizeDetails[prizeId];
@@ -172,12 +185,46 @@ export default function PrizeDetails() {
     }
   };
 
+  const getTokenCost = (prizeId) => {
+    return CONTEST_TOKEN_COSTS[prizeId] || 100;
+  };
+
+  const hasEnoughTokens = (prizeId) => {
+    return userTokens >= getTokenCost(prizeId);
+  };
+
+  const handleEnterContest = () => {
+    const tokenCost = getTokenCost(selectedPrize.id);
+    if (hasEnoughTokens(selectedPrize.id)) {
+      // Deduct tokens and enter contest
+      setUserTokens(prev => prev - tokenCost);
+      closeModal();
+      // Here you would typically redirect to the contest entry form
+      alert(`Contest entered! ${tokenCost} tokens deducted. Remaining tokens: ${userTokens - tokenCost}`);
+    }
+  };
+
+  const handleBuyTokens = () => {
+    closeModal();
+    // Open token purchase modal
+    const tokenModal = document.getElementById('tokenPurchaseModal');
+    if (tokenModal) {
+      import('bootstrap').then((bootstrap) => {
+        const modal = new bootstrap.Modal(tokenModal);
+        modal.show();
+      });
+    }
+  };
+
   // Expose the openModal function globally so it can be called from contest cards
   if (typeof window !== 'undefined') {
     window.openPrizeModal = openModal;
   }
 
   if (!selectedPrize) return null;
+
+  const tokenCost = getTokenCost(selectedPrize.id);
+  const canEnter = hasEnoughTokens(selectedPrize.id);
 
   return (
     <div className="modal fade modalCenter show" style={{ display: 'block' }}>
@@ -267,21 +314,27 @@ export default function PrizeDetails() {
                   </div>
 
                   <div className="prize-actions">
-                    <button 
-                      className="tf-btn"
-                      onClick={() => {
-                        closeModal();
-                        // Open token purchase modal
-                        const tokenModal = document.getElementById('tokenPurchaseModal');
-                        if (tokenModal) {
-                          const bootstrap = require('bootstrap');
-                          const modal = new bootstrap.Modal(tokenModal);
-                          modal.show();
-                        }
-                      }}
-                    >
-                      Buy Tokens to Enter <i className="icon-right" />
-                    </button>
+                    <div className="token-balance-info">
+                      <span className="user-tokens">Your Tokens: {userTokens}</span>
+                      <span className="contest-cost">Entry Cost: {tokenCost} tokens</span>
+                    </div>
+                    
+                    {canEnter ? (
+                      <button 
+                        className="tf-btn enter-contest-btn"
+                        onClick={handleEnterContest}
+                      >
+                        Enter Contest Now <i className="icon-right" />
+                      </button>
+                    ) : (
+                      <button 
+                        className="tf-btn buy-tokens-btn"
+                        onClick={handleBuyTokens}
+                      >
+                        Buy Tokens to Enter <i className="icon-right" />
+                      </button>
+                    )}
+                    
                     <button className="tf-btn style-3" onClick={closeModal}>
                       Close
                     </button>
