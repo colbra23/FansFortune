@@ -28,8 +28,8 @@ export default function Contests2() {
                   <div className="money-wrap mb-16">
                     <p className="money text-color-clip fs-50">$120</p>
                     <span className="fs-14 fw-9">
-                      Million <br />
-                      in prizes!
+                      RRP <br />
+                      Value!
                     </span>
                   </div>
                   <div className="wg-countdown">
@@ -56,8 +56,8 @@ export default function Contests2() {
                   <div className="money-wrap mb-16">
                     <p className="money text-color-clip fs-50">$120</p>
                     <span className="fs-14 fw-9">
-                      Million <br />
-                      in prizes!
+                      RRP <br />
+                      Value!
                     </span>
                   </div>
                   <div className="wg-countdown">
@@ -84,8 +84,8 @@ export default function Contests2() {
                   <div className="money-wrap mb-16">
                     <p className="money text-color-clip fs-50">$120</p>
                     <span className="fs-14 fw-9">
-                      Million <br />
-                      in prizes!
+                      RRP <br />
+                      Value!
                     </span>
                   </div>
                   <div className="wg-countdown">

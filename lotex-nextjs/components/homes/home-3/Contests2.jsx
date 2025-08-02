@@ -71,7 +71,7 @@ export default function Contests2() {
                         />
                       </div>
                       <p className="title fw-9 fs-14">Win up to</p>
-                      <p className="text-color-clip fs-30 mb-16 letter-space-0">
+                      <p className="title fw-9 fs-14">RRP</p>
                         $2 <span className="fs-20">million</span>
                       </p>
                       <Link
