@@ -371,7 +371,6 @@ export default function ContestEntryForm({ onSubmissionSuccess }) {
       <div className="contest-question-container">
         <div className="contest-question-header">
           <h4>{currentQ.question}</h4>
-          <span className="contest-question-type">{currentQ.type}</span>
         </div>
 
         <div className="contest-options-grid">
