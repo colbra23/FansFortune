@@ -74,7 +74,16 @@ export default function TokenPurchase() {
     // Simulate payment processing
     setTimeout(() => {
       setIsProcessing(false);
-      setCurrentStep(3);
+      // Check if we came from contest entry form
+      const contestEntryInProgress = sessionStorage.getItem('contestEntryInProgress');
+      if (contestEntryInProgress) {
+        // Clear the flag
+        sessionStorage.removeItem('contestEntryInProgress');
+        // Show padlock confirmation instead of success
+        setCurrentStep(4); // New step for padlock confirmation
+      } else {
+        setCurrentStep(3); // Regular success for other purchases
+      }
     }, 3000);
   };
 
