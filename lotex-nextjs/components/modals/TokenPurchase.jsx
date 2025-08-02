@@ -264,8 +264,8 @@ export default function TokenPurchase() {
                       onClick={resetModal}
                       onClick={() => {
                         resetModal();
-                        // Navigate to contest entry form
-                        window.location.href = '/contest';
+                        // Navigate to contest details page with entry form
+                        window.location.href = '/contest-details/1';
                       }}
                     >
                       Start Playing <i className="icon-right" />
