@@ -336,12 +336,6 @@ export default function ContestEntryForm({ onSubmissionSuccess }) {
           </div>
           <div className="contest-summary-actions">
             <button 
-              className="contest-continue-editing-btn"
-              onClick={() => setShowSummary(false)}
-            >
-              Continue Editing
-            </button>
-            <button 
               className="contest-submit-btn"
               onClick={handleSubmit}
             >
