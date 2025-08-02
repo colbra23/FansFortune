@@ -116,16 +116,6 @@ export default function Contests() {
                               >
                                 {card.title}
                               </span>
-                               onClick={(e) => {
-                                 e.preventDefault();
-                                 if (typeof window !== 'undefined' && window.openPrizeModal) {
-                                   window.openPrizeModal(card.id);
-                                 }
-                               }}
-                               style={{ cursor: 'pointer' }}
-                             >
-                               {card.title}
-                             </span>
                             </Link>
                           </h4>
                           <ul className="sub-title-list">
