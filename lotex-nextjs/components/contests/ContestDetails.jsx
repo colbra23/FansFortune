@@ -6,7 +6,12 @@ import TokenPacksCarousel from "./TokenPacksCarousel";
 import { useState } from "react";
 import ContestEntryForm from "./ContestEntryForm";
 export default function ContestDetails({ contest }) {
-  const [quantity, setQuantity] = useState(1);
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+
+  const handleFormSubmissionSuccess = () => {
+    setIsFormSubmitted(true);
+  };
+
   return (
     <div className="tf-container tf-spacing-1">
       <div className="row">
@@ -23,45 +28,49 @@ export default function ContestDetails({ contest }) {
             </p>
           </div>
         </div>
-        <div className="col-lg-12">
-          <div className="content">
-            <ContestEntryForm />
+        {!isFormSubmitted ? (
+          <div className="col-lg-12">
+            <div className="content">
+              <ContestEntryForm onSubmissionSuccess={handleFormSubmissionSuccess} />
+            </div>
           </div>
-        </div>
-        {/* progress-wrap */}
-        <div className="col-lg-12">
-          <TokenPacksCarousel />
-        </div>
-        <div className="col-lg-12">
-          <div className="wg-social">
-            <p className="caption type-secondary">Share this contest</p>
-            <ul className="list-social">
-              <li className="item">
-                <a href="#" className="">
-                  <i className="icon-facebook" />
-                </a>
-              </li>
-              <li className="item">
-                <a href="#" className="">
-                  <i className="icon-twitter" />
-                </a>
-              </li>
-              <li className="item">
-                <a href="#" className="">
-                  <i className="icon-tiktok" />
-                </a>
-              </li>
-              <li className="item">
-                <a href="#" className="">
-                  <i className="icon-youtube" />
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="col-lg-12">
-          <Descriptions />
-        </div>
+        ) : (
+          <>
+            <div className="col-lg-12">
+              <TokenPacksCarousel />
+            </div>
+            <div className="col-lg-12">
+              <div className="wg-social">
+                <p className="caption type-secondary">Share this contest</p>
+                <ul className="list-social">
+                  <li className="item">
+                    <a href="#" className="">
+                      <i className="icon-facebook" />
+                    </a>
+                  </li>
+                  <li className="item">
+                    <a href="#" className="">
+                      <i className="icon-twitter" />
+                    </a>
+                  </li>
+                  <li className="item">
+                    <a href="#" className="">
+                      <i className="icon-tiktok" />
+                    </a>
+                  </li>
+                  <li className="item">
+                    <a href="#" className="">
+                      <i className="icon-youtube" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="col-lg-12">
+              <Descriptions />
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

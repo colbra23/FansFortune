@@ -150,7 +150,7 @@ const questions = [
   }
 ];
 
-export default function ContestEntryForm() {
+export default function ContestEntryForm({ onSubmissionSuccess }) {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState({});
   const [showSummary, setShowSummary] = useState(false);
@@ -213,7 +213,10 @@ export default function ContestEntryForm() {
     // Show padlock animation for 3 seconds, then show success
     setTimeout(() => {
       setShowSubmission(false);
-      setShowSuccess(true);
+      // Call the parent callback to show the rest of the contest details
+      if (onSubmissionSuccess) {
+        onSubmissionSuccess();
+      }
     }, 3000);
   };
 
