@@ -4,7 +4,7 @@ import CountdownTimer from "../common/Countdown";
 import Descriptions from "./Descriptions";
 import TokenPacksCarousel from "./TokenPacksCarousel";
 import { useState } from "react";
-import Link from "next/link";
+import ContestEntryForm from "./ContestEntryForm";
 export default function ContestDetails({ contest }) {
   const [quantity, setQuantity] = useState(1);
   return (
@@ -25,20 +25,7 @@ export default function ContestDetails({ contest }) {
         </div>
         <div className="col-lg-12">
           <div className="content">
-            <div className="wg-countdown">
-              <h5 className="title">Countdown to the end of the contest:</h5>
-              <span className="js-countdown style-2">
-                <CountdownTimer />
-              </span>
-            </div>
-            <div className="image">
-              <Image
-                alt=""
-                src="/images/item/page-title-car.png"
-                width={1316}
-                height={608}
-              />
-            </div>
+            <ContestEntryForm />
           </div>
         </div>
         {/* progress-wrap */}
