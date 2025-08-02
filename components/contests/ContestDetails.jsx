@@ -6,6 +6,7 @@
  import { useState } from "react";
  import Link from "next/link";
  export default function ContestDetails({ contest }) {
+ }
 -  const [quantity, setQuantity] = useState(1);
    return (
      <div className="tf-container tf-spacing-1">
@@ -14,6 +15,7 @@
            </div>
          </div>
          {/* progress-wrap */}
+   )
 -        <div className="col-lg-6 wow fadeInLeft" data-wow-delay="0s">
 -          <div className="wrap-progress">
 -            <div className="header-progress">
