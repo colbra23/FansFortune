@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 
 const CountdownTimer = ({ style = 1, targetDate = "2025-07-31T23:59:59" }) => {
   const [showTimer, setShowTimer] = useState(false);
+  const [timeLeft, setTimeLeft] = useState(null);
+
   useEffect(() => {
     setShowTimer(true);
   }, []);
@@ -20,15 +22,24 @@ const CountdownTimer = ({ style = 1, targetDate = "2025-07-31T23:59:59" }) => {
     return null; // Time is up
   };
 
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  useEffect(() => {
+    // Initialize timeLeft on client side only
+    setTimeLeft(calculateTimeLeft());
+  }, []);
 
   useEffect(() => {
+    if (timeLeft === null) return; // Don't start timer until timeLeft is initialized
+    
     const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
 
     return () => clearInterval(timer); // Cleanup the timer on component unmount
-  }, [targetDate]);
+  }, [targetDate, timeLeft]);
+
+  if (timeLeft === null) {
+    return <div>Loading...</div>; // Show loading state during hydration
+  }
 
   if (!timeLeft) {
     return <div>Time's up!</div>;
