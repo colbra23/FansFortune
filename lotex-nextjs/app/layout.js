@@ -3,6 +3,7 @@ import "../public/scss/main.scss";
 import Login from "@/components/modals/Login";
 import BacktoTop from "@/components/common/BacktoTop";
 import Register from "@/components/modals/Register";
+import TokenPurchase from "@/components/modals/TokenPurchase";
 export const metadata = {
   title: "Home || Lotex - Online Lotto & Lottery React Nextjs Template",
   description: "Lotex - Online Lotto & Lottery React Nextjs Template",
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
 
             <BacktoTop />
             <Register />
+            <TokenPurchase />
           </LayoutWrapper>
         </div>
         <Login />

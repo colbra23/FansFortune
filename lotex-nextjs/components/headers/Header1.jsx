@@ -31,10 +31,14 @@ export default function Header1() {
                 </nav>
                 <div className="header-right">
                   <div className="btn-buy-tickets">
-                    <Link className="tf-btn" href={`/contest`}>
+                    <a 
+                      className="tf-btn" 
+                      href="#tokenPurchaseModal"
+                      data-bs-toggle="modal"
+                    >
                       <i className="icon-tickets" />
                       Buy Tickets
-                    </Link>
+                    </a>
                   </div>
                   <div className="mobile-button" onClick={openMobileMenu}>
                     <svg
