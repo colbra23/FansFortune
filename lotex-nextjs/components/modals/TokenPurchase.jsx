@@ -262,6 +262,11 @@ export default function TokenPurchase() {
                       className="tf-btn"
                       data-bs-dismiss="modal"
                       onClick={resetModal}
+                      onClick={() => {
+                        resetModal();
+                        // Navigate to contest entry form
+                        window.location.href = '/contest';
+                      }}
                     >
                       Start Playing <i className="icon-right" />
                     </button>
