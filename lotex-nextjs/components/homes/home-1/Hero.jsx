@@ -86,7 +86,7 @@ export default function Hero() {
                   be our next lucky winner?
                 </p>
                 <Link href={`/contest`} className="tf-btn">
-                  Play form $25 <i className="icon-right" />
+                  Play for 25 Tokens <i className="icon-right" />
                 </Link>
                 <div className="item-car">
                  {/* <Image

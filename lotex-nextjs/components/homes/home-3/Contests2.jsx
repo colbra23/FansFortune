@@ -40,7 +40,7 @@ export default function Contests2() {
                         href={`/contest`}
                         className="btn-play tf-btn h-67 fs-20"
                       >
-                        Play form $25 <i className="icon-right" />
+                        Play for 200 Tokens <i className="icon-right" />
                       </Link>
                     </div>
                     <div className="image">
@@ -99,3 +99,6 @@ export default function Contests2() {
     </section>
   );
 }
+
+
+export default Contests2

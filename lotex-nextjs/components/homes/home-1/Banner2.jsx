@@ -23,7 +23,7 @@ export default function Banner2() {
                 </div>
                 <div className="text">Enter bonus draw for a chance to win</div>
                 <Link href={`/contest-details/1`} className="tf-btn">
-                  $25 To play <i className="icon-right" />
+                  100 Tokens To Play <i className="icon-right" />
                 </Link>
               </div>
               <div className="banner-img">

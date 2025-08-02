@@ -25,7 +25,7 @@ export default function Banner3() {
                   How to win the lottery? 5 tip for you
                 </div>
                 <Link href={`/contest-details/1`} className="tf-btn">
-                  $25 To play <i className="icon-right" />
+                  100 Tokens To Play <i className="icon-right" />
                 </Link>
               </div>
               <div className="banner-img">

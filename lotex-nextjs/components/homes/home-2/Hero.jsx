@@ -31,7 +31,7 @@ export default function Hero() {
                   sit amet cursus velit. Suspendisse sed tristique mi
                 </div>
                 <Link href={`/contest`} className="tf-btn">
-                  Play form $25 <i className="icon-right" />
+                  Play for 25 Tokens <i className="icon-right" />
                 </Link>
               </div>
               <div className="image">

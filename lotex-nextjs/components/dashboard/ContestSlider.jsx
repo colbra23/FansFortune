@@ -41,7 +41,7 @@ export default function ContestSlider() {
                             className="item-text text-color-clip style-2 type-color-1  is-visible"
                             style={{ opacity: 1 }}
                           >
-                            {"$1 Million*"
+                            {"$1 Million*"
                               ?.split(" ")
                               .join("_")
                               .split("")
@@ -62,7 +62,7 @@ export default function ContestSlider() {
                     </p>
                     <div className="bot">
                       <Link className="tf-btn style-lg" href={`/contest`}>
-                        <span>Play form $25</span>
+                        <span>Play for 25 Tokens</span>
                         <i className="icon-right" />
                       </Link>
                       <div className="sub">*Guaranteed</div>
@@ -97,7 +97,7 @@ export default function ContestSlider() {
                             className="item-text text-color-clip style-2 type-color-1  is-visible"
                             style={{ opacity: 1 }}
                           >
-                            {"$1 Million*"
+                            {"$1 Million*"
                               ?.split(" ")
                               .join("_")
                               .split("")
@@ -118,7 +118,7 @@ export default function ContestSlider() {
                     </p>
                     <div className="bot">
                       <Link className="tf-btn style-lg" href={`/contest`}>
-                        <span>Play form $25</span>
+                        <span>Play for 25 Tokens</span>
                         <i className="icon-right" />
                       </Link>
                       <div className="sub">*Guaranteed</div>
@@ -153,7 +153,7 @@ export default function ContestSlider() {
                             className="item-text text-color-clip style-2 type-color-1  is-visible"
                             style={{ opacity: 1 }}
                           >
-                            {"$1 Million*"
+                            {"$1 Million*"
                               ?.split(" ")
                               .join("_")
                               .split("")
@@ -174,7 +174,7 @@ export default function ContestSlider() {
                     </p>
                     <div className="bot">
                       <Link className="tf-btn style-lg" href={`/contest`}>
-                        <span>Play form $25</span>
+                        <span>Play for 25 Tokens</span>
                         <i className="icon-right" />
                       </Link>
                       <div className="sub">*Guaranteed</div>

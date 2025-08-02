@@ -33,7 +33,7 @@ export default function Banner() {
                   href={`/contest`}
                   className="tf-btn border-node-backgroud"
                 >
-                  Play form $25 <i className="icon-right" />
+                  Play for 25 Tokens <i className="icon-right" />
                 </Link>
                 <div className="text-2">*Guaranteed</div>
               </div>

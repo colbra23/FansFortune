@@ -70,7 +70,7 @@ export default function Hero() {
                 </p>
                 <div className="bot">
                   <Link href={`/contest-details/1`} className="tf-btn btn-play">
-                    Play form $25
+                    Play for 100 Tokens
                     <i className="icon-right" />
                   </Link>
                   <p className="sub fs-14 type-secondary text-center">
