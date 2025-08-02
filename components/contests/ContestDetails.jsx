@@ -3,6 +3,7 @@
  import CountdownTimer from "../common/Countdown";
  import Descriptions from "./Descriptions";
 import TokenPacksCarousel from "./TokenPacksCarousel";
+import TokenPacksCarousel from "./TokenPacksCarousel";
 +import TokenPacksCarousel from "./TokenPacksCarousel";
  import { useState } from "react";
  import Link from "next/link";
@@ -37,7 +38,6 @@ import TokenPacksCarousel from "./TokenPacksCarousel";
 -            </div>
 -            <p>Only 12,206 remaining!</p>
 -          </div>
--        </div>
 -        {/* /progress-wrap */}
 -        {/* price-wrap */}
 -        <div className="col-lg-6 wow fadeInRight" data-wow-delay="0s">
@@ -70,8 +70,10 @@ import TokenPacksCarousel from "./TokenPacksCarousel";
 -              </div>
 -            </div>
 -          </div>
--        </div>
 -        {/* /price-wrap */}
+        <div className="col-lg-12">
+          <TokenPacksCarousel />
+        </div>
         <div className="col-lg-12">
           <TokenPacksCarousel />
         </div>
