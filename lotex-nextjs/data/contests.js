@@ -1,15 +1,15 @@
 export const contestData = [
   {
-    id: 1,
-    title: "Apple iPhone 15 Pro Max",
-    imgSrc: "/images/component/contest-1.jpg",
+    id: 2,
+    title: "Tesla Model 3",
+    imgSrc: "/images/component/contest-2.jpg",
     width: 700,
     height: 460,
     timer: 290603,
     contestNo: "Lo43",
     remaining: 9320,
-    winAmount: 1199,
-    tokenCost: 100,
+    winAmount: 45000,
+    tokenCost: 200,
     categories: ["Art", "Music"],
   },
   {
