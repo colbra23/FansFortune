@@ -1,7 +1,7 @@
 export const contestData = [
   {
     id: 1,
-    title: "90 Bingo",
+   title: "Apple iPhone 15 Pro Max",
     imgSrc: "/images/component/contest-1.jpg",
     width: 700,
     height: 460,
@@ -14,7 +14,7 @@ export const contestData = [
   },
   {
     id: 2,
-    title: "90 Bingo",
+   title: "Tesla Model 3",
     imgSrc: "/images/component/contest-2.jpg",
     width: 700,
     height: 460,
@@ -27,7 +27,7 @@ export const contestData = [
   },
   {
     id: 3,
-    title: "90 Bingo",
+   title: "MacBook Pro 16-inch",
     imgSrc: "/images/component/contest-4.jpg",
     width: 525,
     height: 345,
@@ -40,7 +40,7 @@ export const contestData = [
   },
   {
     id: 4,
-    title: "90 Bingo",
+   title: "Rolex Submariner",
     imgSrc: "/images/component/contest-3.jpg",
     width: 700,
     height: 460,
@@ -53,7 +53,7 @@ export const contestData = [
   },
   {
     id: 5,
-    title: "90 Bingo",
+   title: "Cash Prize $50,000",
     imgSrc: "/images/section/scratchcards-2.jpg",
     width: 700,
     height: 460,

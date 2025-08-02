@@ -126,7 +126,17 @@ export default function Categories() {
                     <div className="heading">
                       <h4 className="title fw-9">
                         <Link href={`/contest-details/${item.id}`}>
-                          {item.title}
+                          <span 
+                            onClick={(e) => {
+                              e.preventDefault();
+                              if (typeof window !== 'undefined' && window.openPrizeModal) {
+                                window.openPrizeModal(item.id);
+                              }
+                            }}
+                            style={{ cursor: 'pointer' }}
+                          >
+                            {item.title}
+                          </span>
                         </Link>
                       </h4>
                       <ul className="sub-title-list">

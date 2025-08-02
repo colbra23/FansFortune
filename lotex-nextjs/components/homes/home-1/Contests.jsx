@@ -105,7 +105,17 @@ export default function Contests() {
                         <div className="heading">
                           <h4 className="title fw-9">
                             <Link href={`/contest-details/${card.id}`}>
-                              {card.title}
+                             <span 
+                               onClick={(e) => {
+                                 e.preventDefault();
+                                 if (typeof window !== 'undefined' && window.openPrizeModal) {
+                                   window.openPrizeModal(card.id);
+                                 }
+                               }}
+                               style={{ cursor: 'pointer' }}
+                             >
+                               {card.title}
+                             </span>
                             </Link>
                           </h4>
                           <ul className="sub-title-list">
