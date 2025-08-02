@@ -240,7 +240,7 @@ export default function TokenPurchase() {
             )}
 
             {/* Step 4: Success */}
-            {currentStep === 3 && (
+            {currentStep === 3 && !sessionStorage.getItem('contestEntryInProgress') && (
               <div className="payment-success">
                 <div className="success-content">
                   <div className="success-icon">
@@ -264,6 +264,44 @@ export default function TokenPurchase() {
                       onClick={resetModal}
                     >
                       Start Playing <i className="icon-right" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Step 4: Contest Entry Sealed */}
+            {currentStep === 4 && (
+              <div className="contest-entry-sealed">
+                <div className="sealed-content">
+                  <div className="padlock-animation">
+                    <div className="padlock-container">
+                      <i className="icon-lock" style={{ fontSize: '4rem', color: 'var(--Main-color)' }}></i>
+                      <div className="lock-pulse"></div>
+                    </div>
+                  </div>
+                  
+                  <h4>Entry Sealed!</h4>
+                  <div className="sealed-message">
+                    Your contest entry is now securely locked in our system.
+                  </div>
+                  
+                  <div className="live-game-reminder">
+                    <p><strong>Don't miss out!</strong></p>
+                    <p>Login during the live game for bonus skill challenges that could boost your score even higher!</p>
+                  </div>
+
+                  <div className="sealed-actions">
+                    <button 
+                      className="tf-btn"
+                      data-bs-dismiss="modal"
+                      onClick={() => {
+                        resetModal();
+                        // Navigate back to contest or dashboard
+                        window.location.href = '/dashboard';
+                      }}
+                    >
+                      Continue Playing <i className="icon-right" />
                     </button>
                   </div>
                 </div>
