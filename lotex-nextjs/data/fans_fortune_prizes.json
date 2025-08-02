@@ -1,0 +1,902 @@
+[
+  {
+    "category": "Headphones & Earbuds",
+    "name": "Headphones Item 1",
+    "imageUrl": "https://example.com/headphones&earbuds1.jpg",
+    "priceUSD": 576.39,
+    "specs": "Specs for Headphones Item 1",
+    "description": "Description of Headphones Item 1",
+    "tokenCost": 3
+  },
+  {
+    "category": "Headphones & Earbuds",
+    "name": "Headphones Item 2",
+    "imageUrl": "https://example.com/headphones&earbuds2.jpg",
+    "priceUSD": 24.89,
+    "specs": "Specs for Headphones Item 2",
+    "description": "Description of Headphones Item 2",
+    "tokenCost": 0
+  },
+  {
+    "category": "Headphones & Earbuds",
+    "name": "Headphones Item 3",
+    "imageUrl": "https://example.com/headphones&earbuds3.jpg",
+    "priceUSD": 448.71,
+    "specs": "Specs for Headphones Item 3",
+    "description": "Description of Headphones Item 3",
+    "tokenCost": 2
+  },
+  {
+    "category": "Headphones & Earbuds",
+    "name": "Headphones Item 4",
+    "imageUrl": "https://example.com/headphones&earbuds4.jpg",
+    "priceUSD": 370.46,
+    "specs": "Specs for Headphones Item 4",
+    "description": "Description of Headphones Item 4",
+    "tokenCost": 2
+  },
+  {
+    "category": "Headphones & Earbuds",
+    "name": "Headphones Item 5",
+    "imageUrl": "https://example.com/headphones&earbuds5.jpg",
+    "priceUSD": 401.2,
+    "specs": "Specs for Headphones Item 5",
+    "description": "Description of Headphones Item 5",
+    "tokenCost": 2
+  },
+  {
+    "category": "Headphones & Earbuds",
+    "name": "Headphones Item 6",
+    "imageUrl": "https://example.com/headphones&earbuds6.jpg",
+    "priceUSD": 341.51,
+    "specs": "Specs for Headphones Item 6",
+    "description": "Description of Headphones Item 6",
+    "tokenCost": 2
+  },
+  {
+    "category": "Headphones & Earbuds",
+    "name": "Headphones Item 7",
+    "imageUrl": "https://example.com/headphones&earbuds7.jpg",
+    "priceUSD": 542.29,
+    "specs": "Specs for Headphones Item 7",
+    "description": "Description of Headphones Item 7",
+    "tokenCost": 3
+  },
+  {
+    "category": "Headphones & Earbuds",
+    "name": "Headphones Item 8",
+    "imageUrl": "https://example.com/headphones&earbuds8.jpg",
+    "priceUSD": 395.6,
+    "specs": "Specs for Headphones Item 8",
+    "description": "Description of Headphones Item 8",
+    "tokenCost": 2
+  },
+  {
+    "category": "Headphones & Earbuds",
+    "name": "Headphones Item 9",
+    "imageUrl": "https://example.com/headphones&earbuds9.jpg",
+    "priceUSD": 49.66,
+    "specs": "Specs for Headphones Item 9",
+    "description": "Description of Headphones Item 9",
+    "tokenCost": 0
+  },
+  {
+    "category": "Headphones & Earbuds",
+    "name": "Headphones Item 10",
+    "imageUrl": "https://example.com/headphones&earbuds10.jpg",
+    "priceUSD": 769.81,
+    "specs": "Specs for Headphones Item 10",
+    "description": "Description of Headphones Item 10",
+    "tokenCost": 4
+  },
+  {
+    "category": "Gaming Consoles",
+    "name": "Gaming Item 1",
+    "imageUrl": "https://example.com/gamingconsoles1.jpg",
+    "priceUSD": 421.11,
+    "specs": "Specs for Gaming Item 1",
+    "description": "Description of Gaming Item 1",
+    "tokenCost": 2
+  },
+  {
+    "category": "Gaming Consoles",
+    "name": "Gaming Item 2",
+    "imageUrl": "https://example.com/gamingconsoles2.jpg",
+    "priceUSD": 56.03,
+    "specs": "Specs for Gaming Item 2",
+    "description": "Description of Gaming Item 2",
+    "tokenCost": 0
+  },
+  {
+    "category": "Gaming Consoles",
+    "name": "Gaming Item 3",
+    "imageUrl": "https://example.com/gamingconsoles3.jpg",
+    "priceUSD": 426.05,
+    "specs": "Specs for Gaming Item 3",
+    "description": "Description of Gaming Item 3",
+    "tokenCost": 2
+  },
+  {
+    "category": "Gaming Consoles",
+    "name": "Gaming Item 4",
+    "imageUrl": "https://example.com/gamingconsoles4.jpg",
+    "priceUSD": 731.72,
+    "specs": "Specs for Gaming Item 4",
+    "description": "Description of Gaming Item 4",
+    "tokenCost": 4
+  },
+  {
+    "category": "Gaming Consoles",
+    "name": "Gaming Item 5",
+    "imageUrl": "https://example.com/gamingconsoles5.jpg",
+    "priceUSD": 341.46,
+    "specs": "Specs for Gaming Item 5",
+    "description": "Description of Gaming Item 5",
+    "tokenCost": 2
+  },
+  {
+    "category": "Gaming Consoles",
+    "name": "Gaming Item 6",
+    "imageUrl": "https://example.com/gamingconsoles6.jpg",
+    "priceUSD": 578.68,
+    "specs": "Specs for Gaming Item 6",
+    "description": "Description of Gaming Item 6",
+    "tokenCost": 3
+  },
+  {
+    "category": "Gaming Consoles",
+    "name": "Gaming Item 7",
+    "imageUrl": "https://example.com/gamingconsoles7.jpg",
+    "priceUSD": 180.41,
+    "specs": "Specs for Gaming Item 7",
+    "description": "Description of Gaming Item 7",
+    "tokenCost": 1
+  },
+  {
+    "category": "Gaming Consoles",
+    "name": "Gaming Item 8",
+    "imageUrl": "https://example.com/gamingconsoles8.jpg",
+    "priceUSD": 541.64,
+    "specs": "Specs for Gaming Item 8",
+    "description": "Description of Gaming Item 8",
+    "tokenCost": 3
+  },
+  {
+    "category": "Gaming Consoles",
+    "name": "Gaming Item 9",
+    "imageUrl": "https://example.com/gamingconsoles9.jpg",
+    "priceUSD": 63.31,
+    "specs": "Specs for Gaming Item 9",
+    "description": "Description of Gaming Item 9",
+    "tokenCost": 0
+  },
+  {
+    "category": "Gaming Consoles",
+    "name": "Gaming Item 10",
+    "imageUrl": "https://example.com/gamingconsoles10.jpg",
+    "priceUSD": 305.91,
+    "specs": "Specs for Gaming Item 10",
+    "description": "Description of Gaming Item 10",
+    "tokenCost": 2
+  },
+  {
+    "category": "Tablets",
+    "name": "Tablets Item 1",
+    "imageUrl": "https://example.com/tablets1.jpg",
+    "priceUSD": 29.08,
+    "specs": "Specs for Tablets Item 1",
+    "description": "Description of Tablets Item 1",
+    "tokenCost": 0
+  },
+  {
+    "category": "Tablets",
+    "name": "Tablets Item 2",
+    "imageUrl": "https://example.com/tablets2.jpg",
+    "priceUSD": 661.12,
+    "specs": "Specs for Tablets Item 2",
+    "description": "Description of Tablets Item 2",
+    "tokenCost": 3
+  },
+  {
+    "category": "Tablets",
+    "name": "Tablets Item 3",
+    "imageUrl": "https://example.com/tablets3.jpg",
+    "priceUSD": 278.29,
+    "specs": "Specs for Tablets Item 3",
+    "description": "Description of Tablets Item 3",
+    "tokenCost": 1
+  },
+  {
+    "category": "Tablets",
+    "name": "Tablets Item 4",
+    "imageUrl": "https://example.com/tablets4.jpg",
+    "priceUSD": 259.29,
+    "specs": "Specs for Tablets Item 4",
+    "description": "Description of Tablets Item 4",
+    "tokenCost": 1
+  },
+  {
+    "category": "Tablets",
+    "name": "Tablets Item 5",
+    "imageUrl": "https://example.com/tablets5.jpg",
+    "priceUSD": 101.24,
+    "specs": "Specs for Tablets Item 5",
+    "description": "Description of Tablets Item 5",
+    "tokenCost": 1
+  },
+  {
+    "category": "Tablets",
+    "name": "Tablets Item 6",
+    "imageUrl": "https://example.com/tablets6.jpg",
+    "priceUSD": 185.84,
+    "specs": "Specs for Tablets Item 6",
+    "description": "Description of Tablets Item 6",
+    "tokenCost": 1
+  },
+  {
+    "category": "Tablets",
+    "name": "Tablets Item 7",
+    "imageUrl": "https://example.com/tablets7.jpg",
+    "priceUSD": 644.91,
+    "specs": "Specs for Tablets Item 7",
+    "description": "Description of Tablets Item 7",
+    "tokenCost": 3
+  },
+  {
+    "category": "Tablets",
+    "name": "Tablets Item 8",
+    "imageUrl": "https://example.com/tablets8.jpg",
+    "priceUSD": 237.24,
+    "specs": "Specs for Tablets Item 8",
+    "description": "Description of Tablets Item 8",
+    "tokenCost": 1
+  },
+  {
+    "category": "Tablets",
+    "name": "Tablets Item 9",
+    "imageUrl": "https://example.com/tablets9.jpg",
+    "priceUSD": 47.42,
+    "specs": "Specs for Tablets Item 9",
+    "description": "Description of Tablets Item 9",
+    "tokenCost": 0
+  },
+  {
+    "category": "Tablets",
+    "name": "Tablets Item 10",
+    "imageUrl": "https://example.com/tablets10.jpg",
+    "priceUSD": 388.32,
+    "specs": "Specs for Tablets Item 10",
+    "description": "Description of Tablets Item 10",
+    "tokenCost": 2
+  },
+  {
+    "category": "Smartphones",
+    "name": "Smartphones Item 1",
+    "imageUrl": "https://example.com/smartphones1.jpg",
+    "priceUSD": 85.05,
+    "specs": "Specs for Smartphones Item 1",
+    "description": "Description of Smartphones Item 1",
+    "tokenCost": 0
+  },
+  {
+    "category": "Smartphones",
+    "name": "Smartphones Item 2",
+    "imageUrl": "https://example.com/smartphones2.jpg",
+    "priceUSD": 572.3,
+    "specs": "Specs for Smartphones Item 2",
+    "description": "Description of Smartphones Item 2",
+    "tokenCost": 3
+  },
+  {
+    "category": "Smartphones",
+    "name": "Smartphones Item 3",
+    "imageUrl": "https://example.com/smartphones3.jpg",
+    "priceUSD": 100.12,
+    "specs": "Specs for Smartphones Item 3",
+    "description": "Description of Smartphones Item 3",
+    "tokenCost": 1
+  },
+  {
+    "category": "Smartphones",
+    "name": "Smartphones Item 4",
+    "imageUrl": "https://example.com/smartphones4.jpg",
+    "priceUSD": 189.26,
+    "specs": "Specs for Smartphones Item 4",
+    "description": "Description of Smartphones Item 4",
+    "tokenCost": 1
+  },
+  {
+    "category": "Smartphones",
+    "name": "Smartphones Item 5",
+    "imageUrl": "https://example.com/smartphones5.jpg",
+    "priceUSD": 510.18,
+    "specs": "Specs for Smartphones Item 5",
+    "description": "Description of Smartphones Item 5",
+    "tokenCost": 3
+  },
+  {
+    "category": "Smartphones",
+    "name": "Smartphones Item 6",
+    "imageUrl": "https://example.com/smartphones6.jpg",
+    "priceUSD": 687.57,
+    "specs": "Specs for Smartphones Item 6",
+    "description": "Description of Smartphones Item 6",
+    "tokenCost": 3
+  },
+  {
+    "category": "Smartphones",
+    "name": "Smartphones Item 7",
+    "imageUrl": "https://example.com/smartphones7.jpg",
+    "priceUSD": 429.85,
+    "specs": "Specs for Smartphones Item 7",
+    "description": "Description of Smartphones Item 7",
+    "tokenCost": 2
+  },
+  {
+    "category": "Smartphones",
+    "name": "Smartphones Item 8",
+    "imageUrl": "https://example.com/smartphones8.jpg",
+    "priceUSD": 775.46,
+    "specs": "Specs for Smartphones Item 8",
+    "description": "Description of Smartphones Item 8",
+    "tokenCost": 4
+  },
+  {
+    "category": "Smartphones",
+    "name": "Smartphones Item 9",
+    "imageUrl": "https://example.com/smartphones9.jpg",
+    "priceUSD": 121.39,
+    "specs": "Specs for Smartphones Item 9",
+    "description": "Description of Smartphones Item 9",
+    "tokenCost": 1
+  },
+  {
+    "category": "Smartphones",
+    "name": "Smartphones Item 10",
+    "imageUrl": "https://example.com/smartphones10.jpg",
+    "priceUSD": 796.71,
+    "specs": "Specs for Smartphones Item 10",
+    "description": "Description of Smartphones Item 10",
+    "tokenCost": 4
+  },
+  {
+    "category": "Smartwatches & Wearables",
+    "name": "Smartwatches Item 1",
+    "imageUrl": "https://example.com/smartwatches&wearables1.jpg",
+    "priceUSD": 159.09,
+    "specs": "Specs for Smartwatches Item 1",
+    "description": "Description of Smartwatches Item 1",
+    "tokenCost": 1
+  },
+  {
+    "category": "Smartwatches & Wearables",
+    "name": "Smartwatches Item 2",
+    "imageUrl": "https://example.com/smartwatches&wearables2.jpg",
+    "priceUSD": 289.83,
+    "specs": "Specs for Smartwatches Item 2",
+    "description": "Description of Smartwatches Item 2",
+    "tokenCost": 1
+  },
+  {
+    "category": "Smartwatches & Wearables",
+    "name": "Smartwatches Item 3",
+    "imageUrl": "https://example.com/smartwatches&wearables3.jpg",
+    "priceUSD": 734.98,
+    "specs": "Specs for Smartwatches Item 3",
+    "description": "Description of Smartwatches Item 3",
+    "tokenCost": 4
+  },
+  {
+    "category": "Smartwatches & Wearables",
+    "name": "Smartwatches Item 4",
+    "imageUrl": "https://example.com/smartwatches&wearables4.jpg",
+    "priceUSD": 181.93,
+    "specs": "Specs for Smartwatches Item 4",
+    "description": "Description of Smartwatches Item 4",
+    "tokenCost": 1
+  },
+  {
+    "category": "Smartwatches & Wearables",
+    "name": "Smartwatches Item 5",
+    "imageUrl": "https://example.com/smartwatches&wearables5.jpg",
+    "priceUSD": 217.03,
+    "specs": "Specs for Smartwatches Item 5",
+    "description": "Description of Smartwatches Item 5",
+    "tokenCost": 1
+  },
+  {
+    "category": "Smartwatches & Wearables",
+    "name": "Smartwatches Item 6",
+    "imageUrl": "https://example.com/smartwatches&wearables6.jpg",
+    "priceUSD": 701.29,
+    "specs": "Specs for Smartwatches Item 6",
+    "description": "Description of Smartwatches Item 6",
+    "tokenCost": 4
+  },
+  {
+    "category": "Smartwatches & Wearables",
+    "name": "Smartwatches Item 7",
+    "imageUrl": "https://example.com/smartwatches&wearables7.jpg",
+    "priceUSD": 541.33,
+    "specs": "Specs for Smartwatches Item 7",
+    "description": "Description of Smartwatches Item 7",
+    "tokenCost": 3
+  },
+  {
+    "category": "Smartwatches & Wearables",
+    "name": "Smartwatches Item 8",
+    "imageUrl": "https://example.com/smartwatches&wearables8.jpg",
+    "priceUSD": 607.0,
+    "specs": "Specs for Smartwatches Item 8",
+    "description": "Description of Smartwatches Item 8",
+    "tokenCost": 3
+  },
+  {
+    "category": "Smartwatches & Wearables",
+    "name": "Smartwatches Item 9",
+    "imageUrl": "https://example.com/smartwatches&wearables9.jpg",
+    "priceUSD": 527.81,
+    "specs": "Specs for Smartwatches Item 9",
+    "description": "Description of Smartwatches Item 9",
+    "tokenCost": 3
+  },
+  {
+    "category": "Smartwatches & Wearables",
+    "name": "Smartwatches Item 10",
+    "imageUrl": "https://example.com/smartwatches&wearables10.jpg",
+    "priceUSD": 654.44,
+    "specs": "Specs for Smartwatches Item 10",
+    "description": "Description of Smartwatches Item 10",
+    "tokenCost": 3
+  },
+  {
+    "category": "Gaming Accessories",
+    "name": "Gaming Item 1",
+    "imageUrl": "https://example.com/gamingaccessories1.jpg",
+    "priceUSD": 738.46,
+    "specs": "Specs for Gaming Item 1",
+    "description": "Description of Gaming Item 1",
+    "tokenCost": 4
+  },
+  {
+    "category": "Gaming Accessories",
+    "name": "Gaming Item 2",
+    "imageUrl": "https://example.com/gamingaccessories2.jpg",
+    "priceUSD": 92.1,
+    "specs": "Specs for Gaming Item 2",
+    "description": "Description of Gaming Item 2",
+    "tokenCost": 0
+  },
+  {
+    "category": "Gaming Accessories",
+    "name": "Gaming Item 3",
+    "imageUrl": "https://example.com/gamingaccessories3.jpg",
+    "priceUSD": 502.64,
+    "specs": "Specs for Gaming Item 3",
+    "description": "Description of Gaming Item 3",
+    "tokenCost": 3
+  },
+  {
+    "category": "Gaming Accessories",
+    "name": "Gaming Item 4",
+    "imageUrl": "https://example.com/gamingaccessories4.jpg",
+    "priceUSD": 522.13,
+    "specs": "Specs for Gaming Item 4",
+    "description": "Description of Gaming Item 4",
+    "tokenCost": 3
+  },
+  {
+    "category": "Gaming Accessories",
+    "name": "Gaming Item 5",
+    "imageUrl": "https://example.com/gamingaccessories5.jpg",
+    "priceUSD": 730.79,
+    "specs": "Specs for Gaming Item 5",
+    "description": "Description of Gaming Item 5",
+    "tokenCost": 4
+  },
+  {
+    "category": "Gaming Accessories",
+    "name": "Gaming Item 6",
+    "imageUrl": "https://example.com/gamingaccessories6.jpg",
+    "priceUSD": 312.32,
+    "specs": "Specs for Gaming Item 6",
+    "description": "Description of Gaming Item 6",
+    "tokenCost": 2
+  },
+  {
+    "category": "Gaming Accessories",
+    "name": "Gaming Item 7",
+    "imageUrl": "https://example.com/gamingaccessories7.jpg",
+    "priceUSD": 781.59,
+    "specs": "Specs for Gaming Item 7",
+    "description": "Description of Gaming Item 7",
+    "tokenCost": 4
+  },
+  {
+    "category": "Gaming Accessories",
+    "name": "Gaming Item 8",
+    "imageUrl": "https://example.com/gamingaccessories8.jpg",
+    "priceUSD": 46.0,
+    "specs": "Specs for Gaming Item 8",
+    "description": "Description of Gaming Item 8",
+    "tokenCost": 0
+  },
+  {
+    "category": "Gaming Accessories",
+    "name": "Gaming Item 9",
+    "imageUrl": "https://example.com/gamingaccessories9.jpg",
+    "priceUSD": 730.75,
+    "specs": "Specs for Gaming Item 9",
+    "description": "Description of Gaming Item 9",
+    "tokenCost": 4
+  },
+  {
+    "category": "Gaming Accessories",
+    "name": "Gaming Item 10",
+    "imageUrl": "https://example.com/gamingaccessories10.jpg",
+    "priceUSD": 481.95,
+    "specs": "Specs for Gaming Item 10",
+    "description": "Description of Gaming Item 10",
+    "tokenCost": 2
+  },
+  {
+    "category": "Audio Speakers",
+    "name": "Audio Item 1",
+    "imageUrl": "https://example.com/audiospeakers1.jpg",
+    "priceUSD": 79.57,
+    "specs": "Specs for Audio Item 1",
+    "description": "Description of Audio Item 1",
+    "tokenCost": 0
+  },
+  {
+    "category": "Audio Speakers",
+    "name": "Audio Item 2",
+    "imageUrl": "https://example.com/audiospeakers2.jpg",
+    "priceUSD": 556.29,
+    "specs": "Specs for Audio Item 2",
+    "description": "Description of Audio Item 2",
+    "tokenCost": 3
+  },
+  {
+    "category": "Audio Speakers",
+    "name": "Audio Item 3",
+    "imageUrl": "https://example.com/audiospeakers3.jpg",
+    "priceUSD": 390.63,
+    "specs": "Specs for Audio Item 3",
+    "description": "Description of Audio Item 3",
+    "tokenCost": 2
+  },
+  {
+    "category": "Audio Speakers",
+    "name": "Audio Item 4",
+    "imageUrl": "https://example.com/audiospeakers4.jpg",
+    "priceUSD": 553.94,
+    "specs": "Specs for Audio Item 4",
+    "description": "Description of Audio Item 4",
+    "tokenCost": 3
+  },
+  {
+    "category": "Audio Speakers",
+    "name": "Audio Item 5",
+    "imageUrl": "https://example.com/audiospeakers5.jpg",
+    "priceUSD": 707.07,
+    "specs": "Specs for Audio Item 5",
+    "description": "Description of Audio Item 5",
+    "tokenCost": 4
+  },
+  {
+    "category": "Audio Speakers",
+    "name": "Audio Item 6",
+    "imageUrl": "https://example.com/audiospeakers6.jpg",
+    "priceUSD": 424.64,
+    "specs": "Specs for Audio Item 6",
+    "description": "Description of Audio Item 6",
+    "tokenCost": 2
+  },
+  {
+    "category": "Audio Speakers",
+    "name": "Audio Item 7",
+    "imageUrl": "https://example.com/audiospeakers7.jpg",
+    "priceUSD": 407.87,
+    "specs": "Specs for Audio Item 7",
+    "description": "Description of Audio Item 7",
+    "tokenCost": 2
+  },
+  {
+    "category": "Audio Speakers",
+    "name": "Audio Item 8",
+    "imageUrl": "https://example.com/audiospeakers8.jpg",
+    "priceUSD": 606.21,
+    "specs": "Specs for Audio Item 8",
+    "description": "Description of Audio Item 8",
+    "tokenCost": 3
+  },
+  {
+    "category": "Audio Speakers",
+    "name": "Audio Item 9",
+    "imageUrl": "https://example.com/audiospeakers9.jpg",
+    "priceUSD": 112.44,
+    "specs": "Specs for Audio Item 9",
+    "description": "Description of Audio Item 9",
+    "tokenCost": 1
+  },
+  {
+    "category": "Audio Speakers",
+    "name": "Audio Item 10",
+    "imageUrl": "https://example.com/audiospeakers10.jpg",
+    "priceUSD": 78.15,
+    "specs": "Specs for Audio Item 10",
+    "description": "Description of Audio Item 10",
+    "tokenCost": 0
+  },
+  {
+    "category": "Portable Streaming Devices",
+    "name": "Portable Item 1",
+    "imageUrl": "https://example.com/portablestreamingdevices1.jpg",
+    "priceUSD": 472.33,
+    "specs": "Specs for Portable Item 1",
+    "description": "Description of Portable Item 1",
+    "tokenCost": 2
+  },
+  {
+    "category": "Portable Streaming Devices",
+    "name": "Portable Item 2",
+    "imageUrl": "https://example.com/portablestreamingdevices2.jpg",
+    "priceUSD": 162.35,
+    "specs": "Specs for Portable Item 2",
+    "description": "Description of Portable Item 2",
+    "tokenCost": 1
+  },
+  {
+    "category": "Portable Streaming Devices",
+    "name": "Portable Item 3",
+    "imageUrl": "https://example.com/portablestreamingdevices3.jpg",
+    "priceUSD": 117.35,
+    "specs": "Specs for Portable Item 3",
+    "description": "Description of Portable Item 3",
+    "tokenCost": 1
+  },
+  {
+    "category": "Portable Streaming Devices",
+    "name": "Portable Item 4",
+    "imageUrl": "https://example.com/portablestreamingdevices4.jpg",
+    "priceUSD": 347.52,
+    "specs": "Specs for Portable Item 4",
+    "description": "Description of Portable Item 4",
+    "tokenCost": 2
+  },
+  {
+    "category": "Portable Streaming Devices",
+    "name": "Portable Item 5",
+    "imageUrl": "https://example.com/portablestreamingdevices5.jpg",
+    "priceUSD": 198.71,
+    "specs": "Specs for Portable Item 5",
+    "description": "Description of Portable Item 5",
+    "tokenCost": 1
+  },
+  {
+    "category": "Portable Streaming Devices",
+    "name": "Portable Item 6",
+    "imageUrl": "https://example.com/portablestreamingdevices6.jpg",
+    "priceUSD": 88.28,
+    "specs": "Specs for Portable Item 6",
+    "description": "Description of Portable Item 6",
+    "tokenCost": 0
+  },
+  {
+    "category": "Portable Streaming Devices",
+    "name": "Portable Item 7",
+    "imageUrl": "https://example.com/portablestreamingdevices7.jpg",
+    "priceUSD": 155.77,
+    "specs": "Specs for Portable Item 7",
+    "description": "Description of Portable Item 7",
+    "tokenCost": 1
+  },
+  {
+    "category": "Portable Streaming Devices",
+    "name": "Portable Item 8",
+    "imageUrl": "https://example.com/portablestreamingdevices8.jpg",
+    "priceUSD": 377.2,
+    "specs": "Specs for Portable Item 8",
+    "description": "Description of Portable Item 8",
+    "tokenCost": 2
+  },
+  {
+    "category": "Portable Streaming Devices",
+    "name": "Portable Item 9",
+    "imageUrl": "https://example.com/portablestreamingdevices9.jpg",
+    "priceUSD": 168.99,
+    "specs": "Specs for Portable Item 9",
+    "description": "Description of Portable Item 9",
+    "tokenCost": 1
+  },
+  {
+    "category": "Portable Streaming Devices",
+    "name": "Portable Item 10",
+    "imageUrl": "https://example.com/portablestreamingdevices10.jpg",
+    "priceUSD": 695.96,
+    "specs": "Specs for Portable Item 10",
+    "description": "Description of Portable Item 10",
+    "tokenCost": 3
+  },
+  {
+    "category": "Retro Gaming Handhelds",
+    "name": "Retro Item 1",
+    "imageUrl": "https://example.com/retrogaminghandhelds1.jpg",
+    "priceUSD": 365.49,
+    "specs": "Specs for Retro Item 1",
+    "description": "Description of Retro Item 1",
+    "tokenCost": 2
+  },
+  {
+    "category": "Retro Gaming Handhelds",
+    "name": "Retro Item 2",
+    "imageUrl": "https://example.com/retrogaminghandhelds2.jpg",
+    "priceUSD": 340.79,
+    "specs": "Specs for Retro Item 2",
+    "description": "Description of Retro Item 2",
+    "tokenCost": 2
+  },
+  {
+    "category": "Retro Gaming Handhelds",
+    "name": "Retro Item 3",
+    "imageUrl": "https://example.com/retrogaminghandhelds3.jpg",
+    "priceUSD": 50.25,
+    "specs": "Specs for Retro Item 3",
+    "description": "Description of Retro Item 3",
+    "tokenCost": 0
+  },
+  {
+    "category": "Retro Gaming Handhelds",
+    "name": "Retro Item 4",
+    "imageUrl": "https://example.com/retrogaminghandhelds4.jpg",
+    "priceUSD": 325.86,
+    "specs": "Specs for Retro Item 4",
+    "description": "Description of Retro Item 4",
+    "tokenCost": 2
+  },
+  {
+    "category": "Retro Gaming Handhelds",
+    "name": "Retro Item 5",
+    "imageUrl": "https://example.com/retrogaminghandhelds5.jpg",
+    "priceUSD": 188.9,
+    "specs": "Specs for Retro Item 5",
+    "description": "Description of Retro Item 5",
+    "tokenCost": 1
+  },
+  {
+    "category": "Retro Gaming Handhelds",
+    "name": "Retro Item 6",
+    "imageUrl": "https://example.com/retrogaminghandhelds6.jpg",
+    "priceUSD": 235.4,
+    "specs": "Specs for Retro Item 6",
+    "description": "Description of Retro Item 6",
+    "tokenCost": 1
+  },
+  {
+    "category": "Retro Gaming Handhelds",
+    "name": "Retro Item 7",
+    "imageUrl": "https://example.com/retrogaminghandhelds7.jpg",
+    "priceUSD": 350.2,
+    "specs": "Specs for Retro Item 7",
+    "description": "Description of Retro Item 7",
+    "tokenCost": 2
+  },
+  {
+    "category": "Retro Gaming Handhelds",
+    "name": "Retro Item 8",
+    "imageUrl": "https://example.com/retrogaminghandhelds8.jpg",
+    "priceUSD": 682.74,
+    "specs": "Specs for Retro Item 8",
+    "description": "Description of Retro Item 8",
+    "tokenCost": 3
+  },
+  {
+    "category": "Retro Gaming Handhelds",
+    "name": "Retro Item 9",
+    "imageUrl": "https://example.com/retrogaminghandhelds9.jpg",
+    "priceUSD": 606.81,
+    "specs": "Specs for Retro Item 9",
+    "description": "Description of Retro Item 9",
+    "tokenCost": 3
+  },
+  {
+    "category": "Retro Gaming Handhelds",
+    "name": "Retro Item 10",
+    "imageUrl": "https://example.com/retrogaminghandhelds10.jpg",
+    "priceUSD": 512.86,
+    "specs": "Specs for Retro Item 10",
+    "description": "Description of Retro Item 10",
+    "tokenCost": 3
+  },
+  {
+    "category": "Miscellaneous Gags / Gadgets",
+    "name": "Miscellaneous Item 1",
+    "imageUrl": "https://example.com/miscellaneousgags/gadgets1.jpg",
+    "priceUSD": 317.23,
+    "specs": "Specs for Miscellaneous Item 1",
+    "description": "Description of Miscellaneous Item 1",
+    "tokenCost": 2
+  },
+  {
+    "category": "Miscellaneous Gags / Gadgets",
+    "name": "Miscellaneous Item 2",
+    "imageUrl": "https://example.com/miscellaneousgags/gadgets2.jpg",
+    "priceUSD": 317.06,
+    "specs": "Specs for Miscellaneous Item 2",
+    "description": "Description of Miscellaneous Item 2",
+    "tokenCost": 2
+  },
+  {
+    "category": "Miscellaneous Gags / Gadgets",
+    "name": "Miscellaneous Item 3",
+    "imageUrl": "https://example.com/miscellaneousgags/gadgets3.jpg",
+    "priceUSD": 263.66,
+    "specs": "Specs for Miscellaneous Item 3",
+    "description": "Description of Miscellaneous Item 3",
+    "tokenCost": 1
+  },
+  {
+    "category": "Miscellaneous Gags / Gadgets",
+    "name": "Miscellaneous Item 4",
+    "imageUrl": "https://example.com/miscellaneousgags/gadgets4.jpg",
+    "priceUSD": 359.84,
+    "specs": "Specs for Miscellaneous Item 4",
+    "description": "Description of Miscellaneous Item 4",
+    "tokenCost": 2
+  },
+  {
+    "category": "Miscellaneous Gags / Gadgets",
+    "name": "Miscellaneous Item 5",
+    "imageUrl": "https://example.com/miscellaneousgags/gadgets5.jpg",
+    "priceUSD": 306.3,
+    "specs": "Specs for Miscellaneous Item 5",
+    "description": "Description of Miscellaneous Item 5",
+    "tokenCost": 2
+  },
+  {
+    "category": "Miscellaneous Gags / Gadgets",
+    "name": "Miscellaneous Item 6",
+    "imageUrl": "https://example.com/miscellaneousgags/gadgets6.jpg",
+    "priceUSD": 533.61,
+    "specs": "Specs for Miscellaneous Item 6",
+    "description": "Description of Miscellaneous Item 6",
+    "tokenCost": 3
+  },
+  {
+    "category": "Miscellaneous Gags / Gadgets",
+    "name": "Miscellaneous Item 7",
+    "imageUrl": "https://example.com/miscellaneousgags/gadgets7.jpg",
+    "priceUSD": 647.11,
+    "specs": "Specs for Miscellaneous Item 7",
+    "description": "Description of Miscellaneous Item 7",
+    "tokenCost": 3
+  },
+  {
+    "category": "Miscellaneous Gags / Gadgets",
+    "name": "Miscellaneous Item 8",
+    "imageUrl": "https://example.com/miscellaneousgags/gadgets8.jpg",
+    "priceUSD": 575.5,
+    "specs": "Specs for Miscellaneous Item 8",
+    "description": "Description of Miscellaneous Item 8",
+    "tokenCost": 3
+  },
+  {
+    "category": "Miscellaneous Gags / Gadgets",
+    "name": "Miscellaneous Item 9",
+    "imageUrl": "https://example.com/miscellaneousgags/gadgets9.jpg",
+    "priceUSD": 372.6,
+    "specs": "Specs for Miscellaneous Item 9",
+    "description": "Description of Miscellaneous Item 9",
+    "tokenCost": 2
+  },
+  {
+    "category": "Miscellaneous Gags / Gadgets",
+    "name": "Miscellaneous Item 10",
+    "imageUrl": "https://example.com/miscellaneousgags/gadgets10.jpg",
+    "priceUSD": 466.51,
+    "specs": "Specs for Miscellaneous Item 10",
+    "description": "Description of Miscellaneous Item 10",
+    "tokenCost": 2
+  }
+]
