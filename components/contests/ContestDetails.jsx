@@ -100,3 +100,5 @@ export default function ContestDetails({ contest }) {
           <div className="wg-social">
             <p className="caption type-secondary">Share this contest</p>
             <ul className="list-social">
+  )
+}
