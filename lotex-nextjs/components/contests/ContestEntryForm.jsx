@@ -163,9 +163,16 @@ export default function ContestEntryForm({ onSubmissionSuccess }) {
     if (formRef.current) {
       formRef.current.scrollIntoView({ 
         behavior: 'smooth', 
-        block: 'center',
+        block: 'start',
         inline: 'nearest'
       });
+      // Additional scroll up to ensure header is fully visible
+      setTimeout(() => {
+        window.scrollBy({
+          top: -100,
+          behavior: 'smooth'
+        });
+      }, 300);
     }
   };
 
