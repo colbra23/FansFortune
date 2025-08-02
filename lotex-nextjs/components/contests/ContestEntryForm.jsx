@@ -163,7 +163,7 @@ export default function ContestEntryForm({ onSubmissionSuccess }) {
     if (formRef.current) {
       formRef.current.scrollIntoView({ 
         behavior: 'smooth', 
-        block: 'start',
+        block: 'center',
         inline: 'nearest'
       });
     }
