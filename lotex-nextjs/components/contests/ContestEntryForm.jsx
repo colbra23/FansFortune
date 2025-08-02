@@ -344,6 +344,60 @@ export default function ContestEntryForm({ onSubmissionSuccess }) {
             </button>
           </div>
         </div>
+
+        {/* Submit Confirmation Modal */}
+        {showSubmitModal && (
+          <div className="modal fade modalCenter show" style={{ display: 'block' }}>
+            <div className="modal-dialog modal-dialog-centered" role="document">
+              <div className="modal-content">
+                <div className="submit-confirmation-wrap">
+                  <div className="close-form">
+                    <button 
+                      className="btn-hide-popup" 
+                      onClick={() => setShowSubmitModal(false)}
+                    >
+                      <i className="icon-close" />
+                    </button>
+                  </div>
+
+                  <div className="submit-confirmation-content">
+                    <div className="padlock-animation">
+                      <div className="padlock-container">
+                        <i className="icon-lock" style={{ fontSize: '4rem', color: 'var(--Main-color)' }}></i>
+                        <div className="lock-pulse"></div>
+                      </div>
+                    </div>
+                    
+                    <h4>Score Locked!</h4>
+                    <div className="locked-score">
+                      Your total score of <span className="score-highlight">{calculateTotalScore().toLocaleString()}</span> is now securely locked away.
+                    </div>
+                    
+                    <div className="live-game-reminder">
+                      <p><strong>Don't miss out!</strong></p>
+                      <p>Login during the live game for bonus skill challenges that could boost your score even higher!</p>
+                    </div>
+
+                    <div className="submit-actions">
+                      <button 
+                        className="tf-btn"
+                        onClick={handleConfirmSubmit}
+                      >
+                        Confirm & Lock Entry <i className="icon-right" />
+                      </button>
+                      <button 
+                        className="tf-btn style-3"
+                        onClick={() => setShowSubmitModal(false)}
+                      >
+                        Go Back
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     );
   }

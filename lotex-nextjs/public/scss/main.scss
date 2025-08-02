@@ -1157,6 +1157,14 @@ a {
     min-width: auto;
   }
   
+  .submit-actions {
+    flex-direction: column;
+  }
+  
+  .submit-confirmation-wrap {
+    padding: 20px;
+  }
+  
   .prize-details-wrap {
     padding: 20px;
   }
