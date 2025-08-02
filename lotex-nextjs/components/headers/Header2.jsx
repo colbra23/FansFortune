@@ -21,8 +21,8 @@ export default function Header2() {
                   <Link href={`/`}>
                    {/* <Image
                       alt=""
-                      data-retina="/images/logo/logo@2x.png"
-                      src="/images/logo/logo.png"
+                      data-retina="https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                      src="https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                       width={170}
                       height={60}
                     /> */}
@@ -69,8 +69,8 @@ export default function Header2() {
                    {/* <Image
                       id="mobile-logo_header"
                       alt=""
-                      data-retina="/images/logo/logo@2x.png"
-                      src="/images/logo/logo.png"
+                      data-retina="https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                      src="https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                       width={170}
                       height={60}
                     /> */}

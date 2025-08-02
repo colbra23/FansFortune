@@ -53,9 +53,9 @@ const tokenPacks = [
 const paymentMethods = [
   { id: 'card', name: 'Credit/Debit Card', icon: '/images/icon/visa.svg' },
   { id: 'paypal', name: 'PayPal', icon: '/images/icon/paypal.svg' },
-  { id: 'crypto', name: 'Cryptocurrency', icon: '/images/icon/crypto.svg' },
+  { id: 'crypto', name: 'Cryptocurrency', icon: 'https://images.pexels.com/photos/843700/pexels-photo-843700.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2' },
 ];
-
+ 
 export default function TokenPurchase() {
   const [currentStep, setCurrentStep] = useState(1); // 1: Select Pack, 2: Payment, 3: Confirmation
   const [selectedPack, setSelectedPack] = useState(null);

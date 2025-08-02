@@ -7,60 +7,60 @@ export default function Hero() {
     <>
       {/* page-title-home-1 */}
       <div className="page-title-home-1">
-        {/* <Image class="item-page-title-home-1"  alt=""    src="/images/item/page-title-1.png" width="1920" height="1018" /> */}
+        {/* <Image class="item-page-title-home-1"  alt=""    src="https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" width="1920" height="1018" /> */}
        {/* <Image
           className="coin item-1"
           alt=""
-          src="/images/item/coin-3.png"
+          src="https://images.pexels.com/photos/210607/pexels-photo-210607.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
           width={98}
           height={109}
-        /> 
+        />
         <Image
           className="coin item-2"
           alt=""
-          src="/images/item/coin-4.png"
+          src="https://images.pexels.com/photos/210607/pexels-photo-210607.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
           width={80}
           height={96}
         />
         <Image
           className="coin item-3"
           alt=""
-          src="/images/item/coin-5.png"
+          src="https://images.pexels.com/photos/210607/pexels-photo-210607.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
           width={75}
           height={57}
         />
         <Image
           className="coin item-4"
           alt=""
-          src="/images/item/coin-6.png"
+          src="https://images.pexels.com/photos/210607/pexels-photo-210607.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
           width={74}
           height={68}
         />
         <Image
           className="coin item-5"
           alt=""
-          src="/images/item/coin-7.png"
+          src="https://images.pexels.com/photos/210607/pexels-photo-210607.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
           width={115}
           height={99}
         />
         <Image
           className="coin item-6"
           alt=""
-          src="/images/item/coin-8.png"
+          src="https://images.pexels.com/photos/210607/pexels-photo-210607.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
           width={76}
           height={69}
         />
         <Image
           className="coin item-7"
           alt=""
-          src="/images/item/ball.png"
+          src="https://images.pexels.com/photos/210607/pexels-photo-210607.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
           width={192}
           height={191}
         />
         <Image
           className="coin item-8"
           alt=""
-          src="/images/item/ball-1.png"
+          src="https://images.pexels.com/photos/210607/pexels-photo-210607.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
           width={177}
           height={176}
         /> */}
@@ -91,7 +91,7 @@ export default function Hero() {
                 <div className="item-car">
                  {/* <Image
                     alt=""
-                    src="/images/item/page-title-car.png"
+                    src="https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                     width={1316}
                     height={608}
                   /> */}

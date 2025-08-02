@@ -21,7 +21,7 @@ export default function CoinSelect({ onChange = (elm) => {} }) {
         <div className="filter-option">
           <div className="filter-option-inner">
             <div className="filter-option-inner-inner">
-              <img src="images/item/coin.png" /> {selectedValue}
+              <img src="https://images.pexels.com/photos/210607/pexels-photo-210607.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" /> {selectedValue}
             </div>
           </div>{" "}
         </div>
@@ -61,7 +61,7 @@ export default function CoinSelect({ onChange = (elm) => {} }) {
                   }`}
                 >
                   <span className="text">
-                    <img src="images/item/coin.png" alt="coin" /> {value}
+                    <img src="https://images.pexels.com/photos/210607/pexels-photo-210607.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="coin" /> {value}
                   </span>
                 </a>
               </li>

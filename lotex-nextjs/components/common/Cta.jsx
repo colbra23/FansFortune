@@ -21,9 +21,9 @@ export default function Cta() {
               <div className="bottom wow fadeInUp">
                 <div className="btn-dowload">
                   <a href="#">
-                  {/*  <Image
+                  {/* <Image
                       alt=""
-                      src="/images/item/Android.jpg"
+                      src="https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                       width={519}
                       height={174}
                     /> */}
@@ -31,9 +31,9 @@ export default function Cta() {
                 </div>
                 <div className="btn-dowload">
                   <a href="#">
-                  {/*  <Image
+                  {/* <Image
                       alt=""
-                      src="/images/item/IOS.jpg"
+                      src="https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                       width={519}
                       height={174}
                     /> */}
@@ -45,9 +45,9 @@ export default function Cta() {
                 data-wow-delay="0.3s"
                 data-wow-duration="4s"
               >
-              {/*  <Image
+              {/* <Image
                   alt=""
-                  src="/images/item/phone.png"
+                  src="https://images.pexels.com/photos/3586062/pexels-photo-3586062.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                   width={1085}
                   height={320}
                 /> */}
@@ -57,9 +57,9 @@ export default function Cta() {
                 data-wow-delay="0.5s"
                 data-wow-duration="3s"
               >
-              {/*  <Image
+              {/* <Image
                   alt=""
-                  src="/images/item/coin-1.png"
+                  src="https://images.pexels.com/photos/210607/pexels-photo-210607.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                   width={50}
                   height={50}
                 /> */}
@@ -71,7 +71,7 @@ export default function Cta() {
               >
                {/* <Image
                   alt=""
-                  src="/images/item/coin-2.png"
+                  src="https://images.pexels.com/photos/210607/pexels-photo-210607.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                   width={55}
                   height={54}
                 /> */}

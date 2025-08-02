@@ -29,9 +29,9 @@ const prizeDetails = {
       "Titanium design with Ceramic Shield front"
     ],
     images: [
-      "/images/prizes/iphone-15-pro-1.jpg",
-      "/images/prizes/iphone-15-pro-2.jpg",
-      "/images/prizes/iphone-15-pro-3.jpg"
+      "https://images.pexels.com/photos/1647976/pexels-photo-1647976.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/1647976/pexels-photo-1647976.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/1647976/pexels-photo-1647976.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
     ],
     specifications: {
       "Display": "6.7-inch Super Retina XDR",
@@ -56,9 +56,9 @@ const prizeDetails = {
       "Over-the-air software updates"
     ],
     images: [
-      "/images/prizes/tesla-model3-1.jpg",
-      "/images/prizes/tesla-model3-2.jpg",
-      "/images/prizes/tesla-model3-3.jpg"
+      "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
     ],
     specifications: {
       "Range": "358 miles EPA estimated",
@@ -83,9 +83,9 @@ const prizeDetails = {
       "Six-speaker sound system"
     ],
     images: [
-      "/images/prizes/macbook-pro-1.jpg",
-      "/images/prizes/macbook-pro-2.jpg",
-      "/images/prizes/macbook-pro-3.jpg"
+      "https://images.pexels.com/photos/3586062/pexels-photo-3586062.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/3586062/pexels-photo-3586062.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/3586062/pexels-photo-3586062.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
     ],
     specifications: {
       "Display": "16.2-inch Liquid Retina XDR",
@@ -110,9 +110,9 @@ const prizeDetails = {
       "Chromalight display"
     ],
     images: [
-      "/images/prizes/rolex-submariner-1.jpg",
-      "/images/prizes/rolex-submariner-2.jpg",
-      "/images/prizes/rolex-submariner-3.jpg"
+      "https://images.pexels.com/photos/280250/pexels-photo-280250.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/280250/pexels-photo-280250.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/280250/pexels-photo-280250.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
     ],
     specifications: {
       "Case": "Oystersteel, 41mm",
@@ -137,8 +137,8 @@ const prizeDetails = {
       "Full amount guaranteed"
     ],
     images: [
-      "/images/prizes/cash-prize-1.jpg",
-      "/images/prizes/cash-prize-2.jpg"
+      "https://images.pexels.com/photos/210607/pexels-photo-210607.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/210607/pexels-photo-210607.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
     ],
     specifications: {
       "Amount": "$50,000 USD",

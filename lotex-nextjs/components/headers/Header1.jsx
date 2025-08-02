@@ -15,10 +15,10 @@ export default function Header1() {
               <div className="header-inner-wrap">
                 <div className="header-logo">
                   <Link href={`/`}>
-                  {/*  <Image
+                  {/* <Image
                       alt=""
-                      data-retina="/images/logo/logo@2x.png"
-                      src="/images/logo/logo.png"
+                      data-retina="https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                      src="https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                       width={170}
                       height={60}
                     /> */}
@@ -62,11 +62,11 @@ export default function Header1() {
               <div className="inner-mobile-nav">
                 <div className="top-nav-mobile">
                   <Link href={`/`} rel="home" className="main-logo">
-                  {/*  <Image
+                  {/* <Image
                       id="mobile-logo_header"
                       alt=""
-                      data-retina="/images/logo/logo@2x.png"
-                      src="/images/logo/logo.png"
+                      data-retina="https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                      src="https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                       width={170}
                       height={60}
                     />*/}
