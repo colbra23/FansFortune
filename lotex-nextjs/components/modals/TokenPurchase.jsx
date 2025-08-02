@@ -74,13 +74,30 @@ export default function TokenPurchase() {
     // Simulate payment processing
     setTimeout(() => {
       setIsProcessing(false);
-      // Check if we came from contest entry form
+      // Check if we came from contest entry form or contest button
       const contestEntryInProgress = sessionStorage.getItem('contestEntryInProgress');
       if (contestEntryInProgress) {
-        // Clear the flag
+        // Clear the flags
         sessionStorage.removeItem('contestEntryInProgress');
-        // Show padlock confirmation instead of success
-        setCurrentStep(4); // New step for padlock confirmation
+        const targetContestId = sessionStorage.getItem('targetContestId');
+        sessionStorage.removeItem('targetContestId');
+        
+        // Navigate to contest details page after token purchase
+        setTimeout(() => {
+          const modal = document.getElementById('tokenPurchaseModal');
+          if (modal) {
+            import('bootstrap').then((bootstrap) => {
+              const modalInstance = bootstrap.Modal.getInstance(modal);
+              if (modalInstance) {
+                modalInstance.hide();
+              }
+            });
+          }
+          // Navigate to the contest they wanted to enter
+          window.location.href = `/contest-details/${targetContestId || '1'}`;
+        }, 1000);
+        
+        setCurrentStep(4); // Show success message first
       } else {
         setCurrentStep(3); // Regular success for other purchases
       }
@@ -276,38 +293,27 @@ export default function TokenPurchase() {
             )}
 
             {/* Step 4: Contest Entry Sealed */}
-            {currentStep === 4 && (
+            {currentStep === 4 && sessionStorage.getItem('contestEntryInProgress') && (
               <div className="contest-entry-sealed">
                 <div className="sealed-content">
-                  <div className="padlock-animation">
-                    <div className="padlock-container">
-                      <i className="icon-lock" style={{ fontSize: '4rem', color: 'var(--Main-color)' }}></i>
-                      <div className="lock-pulse"></div>
+                  <div className="success-icon">
+                    <i className="icon-check-1" />
+                  </div>
+                  
+                  <h4>Tokens Purchased Successfully!</h4>
+                  <div className="purchase-details">
+                    <p>You have successfully purchased:</p>
+                    <div className="purchased-pack">
+                      <span className="pack-name">{selectedPack?.name}</span>
+                      <span className="pack-tokens">{selectedPack?.tokens.toLocaleString()} Tokens</span>
+                    </div>
+                    <div className="total-paid">
+                      Total Paid: <span>${selectedPack?.price.toFixed(2)}</span>
                     </div>
                   </div>
                   
-                  <h4>Entry Sealed!</h4>
                   <div className="sealed-message">
-                    Your contest entry is now securely locked in our system.
-                  </div>
-                  
-                  <div className="live-game-reminder">
-                    <p><strong>Don't miss out!</strong></p>
-                    <p>Login during the live game for bonus skill challenges that could boost your score even higher!</p>
-                  </div>
-
-                  <div className="sealed-actions">
-                    <button 
-                      className="tf-btn"
-                      data-bs-dismiss="modal"
-                      onClick={() => {
-                        resetModal();
-                        // Navigate back to the contest details page where the entry form is
-                        window.location.href = '/contest-details/1';
-                      }}
-                    >
-                      Continue Playing <i className="icon-right" />
-                    </button>
+                    You will now be redirected to the contest entry form.
                   </div>
                 </div>
               </div>

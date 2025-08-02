@@ -7,7 +7,7 @@ import { useState } from "react";
 import ContestEntryForm from "./ContestEntryForm";
 
 // Mock user token balance - in a real app, this would come from your user state/API
-const INITIAL_USER_TOKEN_BALANCE = 75; // Example: user has 75 tokens
+const INITIAL_USER_TOKEN_BALANCE = 75; // Example: user has 75 tokens - change this to test different scenarios
 
 // Token costs for each contest
 const CONTEST_TOKEN_COSTS = {
@@ -22,7 +22,17 @@ export default function ContestDetails({ contest }) {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [showTokenPurchaseFlow, setShowTokenPurchaseFlow] = useState(false);
   const [showSealedMessage, setShowSealedMessage] = useState(false);
-  const [userTokens, setUserTokens] = useState(INITIAL_USER_TOKEN_BALANCE);
+  const [userTokens, setUserTokens] = useState(() => {
+    // Check if user just purchased tokens from contest button
+    if (typeof window !== 'undefined') {
+      const purchasedTokens = sessionStorage.getItem('recentTokenPurchase');
+      if (purchasedTokens) {
+        sessionStorage.removeItem('recentTokenPurchase');
+        return INITIAL_USER_TOKEN_BALANCE + parseInt(purchasedTokens);
+      }
+    }
+    return INITIAL_USER_TOKEN_BALANCE;
+  });
 
   const handleFormSubmissionSuccess = () => {
     const prizeId = contest.id || 1;
@@ -41,7 +51,7 @@ export default function ContestDetails({ contest }) {
   };
 
   const handleTokenPurchaseComplete = () => {
-    // After purchasing tokens, show the sealed message
+    // After purchasing tokens from the form submission flow, show the sealed message
     setShowTokenPurchaseFlow(false);
     setShowSealedMessage(true);
     // Update user tokens to ensure they have enough for this contest
