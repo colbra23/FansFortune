@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 
 // Placeholder for a carousel library import, e.g., import Swiper from 'swiper';
 // For now, we'll just render the items in a simple div to get the structure in place.
@@ -49,6 +50,81 @@ const tokenPacks = [
 ];
 
 export default function TokenPacksCarousel() {
+  const [showSealedMessage, setShowSealedMessage] = useState(false);
+  const [isProcessing, setIsProcessing] = useState(false);
+  const [selectedPack, setSelectedPack] = useState(null);
+
+  const handleBuyNow = (pack) => {
+    setSelectedPack(pack);
+    setIsProcessing(true);
+    
+    // Simulate payment processing
+    setTimeout(() => {
+      setIsProcessing(false);
+      setShowSealedMessage(true);
+    }, 3000);
+  };
+
+  const handleContinuePlaying = () => {
+    // Reset the component state and navigate back to contest details
+    setShowSealedMessage(false);
+    setSelectedPack(null);
+    window.location.reload(); // Refresh to show the full contest details
+  };
+
+  if (showSealedMessage) {
+    return (
+      <div className="token-packs-carousel-container">
+        <div className="contest-entry-sealed">
+          <div className="sealed-content">
+            <div className="padlock-animation">
+              <div className="padlock-container">
+                <i className="icon-lock" style={{ fontSize: '4rem', color: 'var(--Main-color)' }}></i>
+                <div className="lock-pulse"></div>
+              </div>
+            </div>
+            
+            <h4>Entry Sealed!</h4>
+            <div className="sealed-message">
+              Your contest entry is now securely locked in our system.
+            </div>
+            
+            <div className="live-game-reminder">
+              <p><strong>Don't miss out!</strong></p>
+              <p>Login during the live game for bonus skill challenges that could boost your score even higher!</p>
+            </div>
+
+            <div className="sealed-actions">
+              <button 
+                className="tf-btn"
+                onClick={handleContinuePlaying}
+              >
+                Continue Playing <i className="icon-right" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (isProcessing) {
+    return (
+      <div className="token-packs-carousel-container">
+        <div className="payment-processing">
+          <div className="processing-content">
+            <div className="processing-icon">
+              <i className="icon-clock" />
+              <div className="processing-spinner"></div>
+            </div>
+            <h4>Processing Your Payment...</h4>
+            <p>Please wait while we securely process your transaction.</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="token-packs-carousel-container">
       <h3>Choose Your Token Pack</h3>
@@ -62,7 +138,12 @@ export default function TokenPacksCarousel() {
               <p className="discount">Save {pack.discount}%</p>
             )}
             <p className="description">{pack.description}</p>
-            <Link href="#" className="tf-btn">Buy Now</Link>
+            <button 
+              className="tf-btn"
+              onClick={() => handleBuyNow(pack)}
+            >
+              Buy Now
+            </button>
           </div>
         ))}
       </div>
