@@ -3,9 +3,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
-// Placeholder for a carousel library import, e.g., import Swiper from 'swiper';
-// For now, we'll just render the items in a simple div to get the structure in place.
-
 const tokenPacks = [
   {
     id: 1,
@@ -49,30 +46,42 @@ const tokenPacks = [
   },
 ];
 
+const paymentMethods = [
+  { id: 'card', name: 'Credit/Debit Card', icon: '/images/icon/visa.svg' },
+  { id: 'paypal', name: 'PayPal', icon: '/images/icon/paypal.svg' },
+  { id: 'crypto', name: 'Cryptocurrency', icon: '/images/icon/crypto.svg' },
+];
+
 export default function TokenPacksCarousel() {
+  const [currentStep, setCurrentStep] = useState(1); // 1: Select Pack, 2: Payment, 3: Processing, 4: Sealed
   const [showSealedMessage, setShowSealedMessage] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
   const [selectedPack, setSelectedPack] = useState(null);
+  const [selectedPayment, setSelectedPayment] = useState('card');
 
-  const handleBuyNow = (pack) => {
+  const handlePackSelect = (pack) => {
     setSelectedPack(pack);
+    setCurrentStep(2);
+  };
+
+  const handlePaymentSubmit = (e) => {
+    e.preventDefault();
+    setCurrentStep(3);
     setIsProcessing(true);
     
     // Simulate payment processing
     setTimeout(() => {
       setIsProcessing(false);
-      setShowSealedMessage(true);
+      setCurrentStep(4);
     }, 3000);
   };
 
   const handleContinuePlaying = () => {
-    // Reset the component state and navigate back to contest details
-    setShowSealedMessage(false);
-    setSelectedPack(null);
-    window.location.reload(); // Refresh to show the full contest details
+    window.location.reload();
   };
 
-  if (showSealedMessage) {
+  // Step 4: Entry Sealed Message
+  if (currentStep === 4) {
     return (
       <div className="token-packs-carousel-container">
         <div className="contest-entry-sealed">
@@ -108,7 +117,8 @@ export default function TokenPacksCarousel() {
     );
   }
 
-  if (isProcessing) {
+  // Step 3: Processing Payment
+  if (currentStep === 3 && isProcessing) {
     return (
       <div className="token-packs-carousel-container">
         <div className="payment-processing">
@@ -125,6 +135,90 @@ export default function TokenPacksCarousel() {
     );
   }
 
+  // Step 2: Payment Method Selection
+  if (currentStep === 2) {
+    return (
+      <div className="token-packs-carousel-container">
+        <div className="payment-method-selection">
+          <div className="token-purchase-header">
+            <h4 className="title">Payment Details</h4>
+            <div className="selected-pack-summary">
+              <span>{selectedPack?.name} - {selectedPack?.tokens.toLocaleString()} Tokens</span>
+              <span className="price">${selectedPack?.price.toFixed(2)}</span>
+            </div>
+          </div>
+
+          <form onSubmit={handlePaymentSubmit} className="payment-form">
+            <div className="payment-methods">
+              <h5>Select Payment Method</h5>
+              <div className="payment-options">
+                {paymentMethods.map((method) => (
+                  <label key={method.id} className="payment-option">
+                    <input
+                      type="radio"
+                      name="payment"
+                      value={method.id}
+                      checked={selectedPayment === method.id}
+                      onChange={(e) => setSelectedPayment(e.target.value)}
+                    />
+                    <div className="payment-option-content">
+                      <div className="payment-icon">
+                        <i className="icon-wallet" />
+                      </div>
+                      <span>{method.name}</span>
+                    </div>
+                    <span className="payment-radio"></span>
+                  </label>
+                ))}
+              </div>
+            </div>
+
+            {selectedPayment === 'card' && (
+              <div className="card-details">
+                <div className="form-row">
+                  <div className="form-group">
+                    <label>Card Number</label>
+                    <input type="text" placeholder="1234 5678 9012 3456" required />
+                  </div>
+                </div>
+                <div className="form-row">
+                  <div className="form-group">
+                    <label>Cardholder Name</label>
+                    <input type="text" placeholder="John Doe" required />
+                  </div>
+                </div>
+                <div className="form-row">
+                  <div className="form-group half">
+                    <label>Expiry Date</label>
+                    <input type="text" placeholder="MM/YY" required />
+                  </div>
+                  <div className="form-group half">
+                    <label>CVV</label>
+                    <input type="text" placeholder="123" required />
+                  </div>
+                </div>
+              </div>
+            )}
+
+            <div className="payment-actions">
+              <button 
+                type="button" 
+                className="tf-btn style-3"
+                onClick={() => setCurrentStep(1)}
+              >
+                Back to Packs
+              </button>
+              <button type="submit" className="tf-btn">
+                Complete Purchase <i className="icon-right" />
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    );
+  }
+
+  // Step 1: Token Pack Selection
   return (
     <div className="token-packs-carousel-container">
       <h3>Choose Your Token Pack</h3>
@@ -140,9 +234,9 @@ export default function TokenPacksCarousel() {
             <p className="description">{pack.description}</p>
             <button 
               className="tf-btn"
-              onClick={() => handleBuyNow(pack)}
+              onClick={() => handlePackSelect(pack)}
             >
-              Buy Now
+              Buy Now <i className="icon-right" />
             </button>
           </div>
         ))}
@@ -203,10 +297,12 @@ export default function TokenPacksCarousel() {
         }
         .tf-btn {
           margin-top: auto; /* Push button to the bottom */
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
         }
       `}</style>
     </div>
   );
 }
-
-
