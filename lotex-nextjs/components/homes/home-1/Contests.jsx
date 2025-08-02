@@ -139,13 +139,33 @@ export default function Contests() {
                           <p className="money text-color-clip style-6">
                             ${card.winAmount.toLocaleString()}
                           </p>
-                          <Link
-                            href={`/contest-details/${card.id}`}
+                          <button
                             className="tf-btn"
+                            onClick={(e) => {
+                              e.preventDefault();
+                              const userTokens = 75; // Mock user token balance
+                              const requiredTokens = card.tokenCost || 100;
+                              
+                              if (userTokens >= requiredTokens) {
+                                // Player has enough tokens - go directly to contest
+                                window.location.href = `/contest-details/${card.id}`;
+                              } else {
+                                // Player needs tokens - show token purchase modal
+                                sessionStorage.setItem('contestEntryInProgress', 'true');
+                                sessionStorage.setItem('targetContestId', card.id);
+                                const tokenModal = document.getElementById('tokenPurchaseModal');
+                                if (tokenModal) {
+                                  import('bootstrap').then((bootstrap) => {
+                                    const modal = new bootstrap.Modal(tokenModal);
+                                    modal.show();
+                                  });
+                                }
+                              }
+                            }}
                           >
                             {card.tokenCost} Tokens To Play{" "}
                             <i className="icon-right"> </i>
-                          </Link>
+                          </button>
                         </div>
                       </div>
                     </div>
