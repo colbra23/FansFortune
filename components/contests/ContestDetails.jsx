@@ -45,9 +45,7 @@ import TokenPacksCarousel from "./TokenPacksCarousel";
 -            <div className="price">
 -              $1,99
 -              <p>/ per ticket</p>
--            </div>
 -            <div className="wrap-quatity">
--              <div className="wg-quantity">
 -                <span
 -                  className="btn-quantity plus-btn"
 -                  onClick={() => setQuantity((pre) => pre + 1)}
@@ -80,7 +78,6 @@ import TokenPacksCarousel from "./TokenPacksCarousel";
           <TokenPacksCarousel />
         </div>
 +        <div className="col-lg-12">
-+          <TokenPacksCarousel />
 +        </div>
          <div className="col-lg-12">
            <div className="wg-social">
