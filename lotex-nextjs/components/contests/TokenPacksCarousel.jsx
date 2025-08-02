@@ -52,9 +52,8 @@ const paymentMethods = [
   { id: 'crypto', name: 'Cryptocurrency', icon: '/images/icon/crypto.svg' },
 ];
 
-export default function TokenPacksCarousel() {
+export default function TokenPacksCarousel({ onPurchaseComplete }) {
   const [currentStep, setCurrentStep] = useState(1); // 1: Select Pack, 2: Payment, 3: Processing, 4: Sealed
-  const [showSealedMessage, setShowSealedMessage] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
   const [selectedPack, setSelectedPack] = useState(null);
   const [selectedPayment, setSelectedPayment] = useState('card');
@@ -72,53 +71,15 @@ export default function TokenPacksCarousel() {
     // Simulate payment processing
     setTimeout(() => {
       setIsProcessing(false);
-      setCurrentStep(4);
+      // Call the parent callback to handle the sealed message
+      if (onPurchaseComplete) {
+        onPurchaseComplete();
+      }
     }, 3000);
   };
 
-  const handleContinuePlaying = () => {
-    window.location.reload();
-  };
-
-  // Step 4: Entry Sealed Message
-  if (currentStep === 4) {
-    return (
-      <div className="token-packs-carousel-container">
-        <div className="contest-entry-sealed">
-          <div className="sealed-content">
-            <div className="padlock-animation">
-              <div className="padlock-container">
-                <i className="icon-lock" style={{ fontSize: '4rem', color: 'var(--Main-color)' }}></i>
-                <div className="lock-pulse"></div>
-              </div>
-            </div>
-            
-            <h4>Entry Sealed!</h4>
-            <div className="sealed-message">
-              Your contest entry is now securely locked in our system.
-            </div>
-            
-            <div className="live-game-reminder">
-              <p><strong>Don't miss out!</strong></p>
-              <p>Login during the live game for bonus skill challenges that could boost your score even higher!</p>
-            </div>
-
-            <div className="sealed-actions">
-              <button 
-                className="tf-btn"
-                onClick={handleContinuePlaying}
-              >
-                Continue Playing <i className="icon-right" />
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
   // Step 3: Processing Payment
-  if (currentStep === 3 && isProcessing) {
+  if (isProcessing) {
     return (
       <div className="token-packs-carousel-container">
         <div className="payment-processing">

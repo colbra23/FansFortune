@@ -150,18 +150,11 @@ const questions = [
   }
 ];
 
-// Mock user token balance - in a real app, this would come from your user state/API
-const USER_TOKEN_BALANCE = 50; // Example: user has only 50 tokens (less than Tesla's 200 cost)
-
 export default function ContestEntryForm({ onSubmissionSuccess }) {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState({});
   const [showSummary, setShowSummary] = useState(false);
-  const [showSubmission, setShowSubmission] = useState(false);
-  const [showSuccess, setShowSuccess] = useState(false);
   const [returnToSummary, setReturnToSummary] = useState(false);
-  const [showSubmitModal, setShowSubmitModal] = useState(false);
-  const [userTokens, setUserTokens] = useState(USER_TOKEN_BALANCE);
   const formRef = useRef(null);
 
   const scrollToTop = () => {
@@ -248,32 +241,10 @@ export default function ContestEntryForm({ onSubmissionSuccess }) {
   };
 
   const handleSubmit = () => {
-    setShowSummary(false);
-    setShowSubmission(true);
-    
-    // Show padlock animation for 3 seconds, then show success
-    setTimeout(() => {
-      setShowSubmission(false);
-      // Call the parent callback to show the rest of the contest details
-      if (onSubmissionSuccess) {
-        onSubmissionSuccess();
-      }
-    }, 3000);
-  };
-
-  const handleConfirmSubmit = () => {
-    setShowSubmitModal(false);
-    setShowSummary(false);
-    setShowSubmission(true);
-    
-    // Show padlock animation for 3 seconds, then show success
-    setTimeout(() => {
-      setShowSubmission(false);
-      // Call the parent callback to show the rest of the contest details
-      if (onSubmissionSuccess) {
-        onSubmissionSuccess();
-      }
-    }, 3000);
+    // Call the parent callback immediately - parent will handle the flow
+    if (onSubmissionSuccess) {
+      onSubmissionSuccess();
+    }
   };
 
   const getTotalScore = () => {
@@ -282,52 +253,6 @@ export default function ContestEntryForm({ onSubmissionSuccess }) {
 
   const currentQ = questions[currentQuestion];
   const isAnswered = answers[currentQ?.id];
-
-  if (showSuccess) {
-    return (
-      <div className="contest-entry-form">
-        <div className="success-screen">
-          <div className="success-content">
-            <div className="success-icon">
-              <i className="icon-check-circle" style={{ fontSize: '4rem', color: '#28a745' }}></i>
-            </div>
-            <h3>Entry Successfully Submitted!</h3>
-            <p>Your predictions have been locked in. Good luck!</p>
-            <p><strong>Total Score: {getTotalScore().toLocaleString()}</strong></p>
-            <button 
-              className="tf-button style-1"
-              onClick={() => window.location.reload()}
-            >
-              Enter Another Contest
-            </button>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  if (showSubmission) {
-    return (
-      <div className="contest-entry-form">
-        <div className="contest-submission-screen">
-          <div className="contest-submission-content">
-            <h3>Securing Your Entry...</h3>
-            <div className="contest-padlock-animation">
-              <div className="contest-padlock-placeholder">
-                <i className="icon-lock" style={{ fontSize: '4rem', color: '#ff6b35' }}></i>
-                <div className="contest-loading-dots">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-              </div>
-            </div>
-            <p>Your predictions are being locked in our secure system.</p>
-          </div>
-        </div>
-      </div>
-    );
-  }
 
   if (showSummary) {
     return (
@@ -363,60 +288,6 @@ export default function ContestEntryForm({ onSubmissionSuccess }) {
             </button>
           </div>
         </div>
-
-        {/* Submit Confirmation Modal */}
-        {showSubmitModal && (
-          <div className="modal fade modalCenter show" style={{ display: 'block' }}>
-            <div className="modal-dialog modal-dialog-centered" role="document">
-              <div className="modal-content">
-                <div className="submit-confirmation-wrap">
-                  <div className="close-form">
-                    <button 
-                      className="btn-hide-popup" 
-                      onClick={() => setShowSubmitModal(false)}
-                    >
-                      <i className="icon-close" />
-                    </button>
-                  </div>
-
-                  <div className="submit-confirmation-content">
-                    <div className="padlock-animation">
-                      <div className="padlock-container">
-                        <i className="icon-lock" style={{ fontSize: '4rem', color: 'var(--Main-color)' }}></i>
-                        <div className="lock-pulse"></div>
-                      </div>
-                    </div>
-                    
-                    <h4>Score Locked!</h4>
-                    <div className="locked-score">
-                      Your total score of <span className="score-highlight">{calculateTotalScore().toLocaleString()}</span> is now securely locked away.
-                    </div>
-                    
-                    <div className="live-game-reminder">
-                      <p><strong>Don't miss out!</strong></p>
-                      <p>Login during the live game for bonus skill challenges that could boost your score even higher!</p>
-                    </div>
-
-                    <div className="submit-actions">
-                      <button 
-                        className="tf-btn"
-                        onClick={handleConfirmSubmit}
-                      >
-                        Confirm & Lock Entry <i className="icon-right" />
-                      </button>
-                      <button 
-                        className="tf-btn style-3"
-                        onClick={() => setShowSubmitModal(false)}
-                      >
-                        Go Back
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
     );
   }
