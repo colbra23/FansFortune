@@ -103,7 +103,7 @@ export default function CurrentContest() {
                       </p>
                     </li>
                   </ul>
-                  <p className="text fs-14 fw-9">Win up to</p>
+                  <p className="text fs-14 fw-9">RRP</p>
                   <p className="money text-color-clip fs-50">
                     ${game.winAmount}
                   </p>

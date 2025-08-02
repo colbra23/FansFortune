@@ -90,7 +90,7 @@ export default function Contests() {
                               </p>
                             </li>
                           </ul>
-                          <p className="text fs-14 fw-9">Win up to</p>
+                          <p className="text fs-14 fw-9">RRP</p>
                           <p className="money text-color-clip style-6">
                             $
                             {card.winAmount.toLocaleString(undefined, {

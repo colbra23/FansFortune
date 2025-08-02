@@ -151,7 +151,7 @@ export default function Categories() {
                           </p>
                         </li>
                       </ul>
-                      <p className="text fs-14 fw-9">Win up to</p>
+                      <p className="text fs-14 fw-9">RRP</p>
                       <p className="money text-color-clip style-6">
                         ${item.winAmount.toLocaleString()}
                       </p>
