@@ -102,3 +102,5 @@ export default function ContestDetails({ contest }) {
             <ul className="list-social">
   )
 }
+  )
+}
