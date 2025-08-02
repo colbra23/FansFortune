@@ -157,6 +157,7 @@ export default function ContestEntryForm({ onSubmissionSuccess }) {
   const [showSubmission, setShowSubmission] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
   const [returnToSummary, setReturnToSummary] = useState(false);
+  const [showSubmitModal, setShowSubmitModal] = useState(false);
   const formRef = useRef(null);
 
   const scrollToTop = () => {
