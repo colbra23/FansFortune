@@ -2,6 +2,7 @@
  import Image from "next/image";
  import CountdownTimer from "../common/Countdown";
  import Descriptions from "./Descriptions";
+import TokenPacksCarousel from "./TokenPacksCarousel";
 +import TokenPacksCarousel from "./TokenPacksCarousel";
  import { useState } from "react";
  import Link from "next/link";
@@ -71,6 +72,9 @@
 -          </div>
 -        </div>
 -        {/* /price-wrap */}
+        <div className="col-lg-12">
+          <TokenPacksCarousel />
+        </div>
 +        <div className="col-lg-12">
 +          <TokenPacksCarousel />
 +        </div>
