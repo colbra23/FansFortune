@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Image from "next/image";
 
 const questions = [
@@ -157,6 +157,17 @@ export default function ContestEntryForm({ onSubmissionSuccess }) {
   const [showSubmission, setShowSubmission] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
   const [returnToSummary, setReturnToSummary] = useState(false);
+  const formRef = useRef(null);
+
+  const scrollToTop = () => {
+    if (formRef.current) {
+      formRef.current.scrollIntoView({ 
+        behavior: 'smooth', 
+        block: 'start',
+        inline: 'nearest'
+      });
+    }
+  };
 
   const calculateTotalScore = () => {
     return Object.values(answers).reduce((total, answer) => total + (answer.points || 0), 0);
@@ -174,8 +185,28 @@ export default function ContestEntryForm({ onSubmissionSuccess }) {
     
     // Auto-advance to next question after a short delay
     setTimeout(() => {
+      // Scroll to top of form before transitioning
+      scrollToTop();
+      
+      // Small additional delay to ensure scroll completes before transition
+      setTimeout(() => {
+        if (returnToSummary) {
+          // If we came from summary, return to summary after editing
+          setReturnToSummary(false);
+          setShowSummary(true);
+        } else if (currentQuestion < questions.length - 1) {
+          setCurrentQuestion(prev => prev + 1);
+        } else {
+          setShowSummary(true);
+        }
+      }, 300);
+    }, 500);
+  };
+
+  const handleNext = () => {
+    scrollToTop();
+    setTimeout(() => {
       if (returnToSummary) {
-        // If we came from summary, return to summary after editing
         setReturnToSummary(false);
         setShowSummary(true);
       } else if (currentQuestion < questions.length - 1) {
@@ -183,27 +214,25 @@ export default function ContestEntryForm({ onSubmissionSuccess }) {
       } else {
         setShowSummary(true);
       }
-    }, 500);
-  };
-
-  const handleNext = () => {
-    if (currentQuestion < questions.length - 1) {
-      setCurrentQuestion(prev => prev + 1);
-    } else {
-      setShowSummary(true);
-    }
+    }, 300);
   };
 
   const handlePrevious = () => {
-    if (currentQuestion > 0) {
-      setCurrentQuestion(prev => prev - 1);
-    }
+    scrollToTop();
+    setTimeout(() => {
+      if (currentQuestion > 0) {
+        setCurrentQuestion(prev => prev - 1);
+      }
+    }, 300);
   };
 
   const handleEdit = (questionIndex) => {
+    scrollToTop();
     setCurrentQuestion(questionIndex);
     setReturnToSummary(true);
-    setShowSummary(false);
+    setTimeout(() => {
+      setShowSummary(false);
+    }, 300);
   };
 
   const handleSubmit = () => {
@@ -318,7 +347,7 @@ export default function ContestEntryForm({ onSubmissionSuccess }) {
   }
 
   return (
-    <div className="contest-entry-form">
+    <div className="contest-entry-form" ref={formRef}>
       <div className="contest-entry-header">
         <h3>Contest Entry Form</h3>
         <div className="contest-progress-indicator">
