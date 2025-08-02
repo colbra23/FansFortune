@@ -4,6 +4,7 @@
  import Descriptions from "./Descriptions";
 import TokenPacksCarousel from "./TokenPacksCarousel";
 import TokenPacksCarousel from "./TokenPacksCarousel";
+import TokenPacksCarousel from "./TokenPacksCarousel";
 +import TokenPacksCarousel from "./TokenPacksCarousel";
  import { useState } from "react";
  import Link from "next/link";
@@ -36,7 +37,6 @@ import TokenPacksCarousel from "./TokenPacksCarousel";
 -                />
 -              </div>
 -            </div>
--            <p>Only 12,206 remaining!</p>
 -          </div>
 -        {/* /progress-wrap */}
 -        {/* price-wrap */}
@@ -69,8 +69,10 @@ import TokenPacksCarousel from "./TokenPacksCarousel";
 -                </Link>
 -              </div>
 -            </div>
--          </div>
 -        {/* /price-wrap */}
+        <div className="col-lg-12">
+          <TokenPacksCarousel />
+        </div>
         <div className="col-lg-12">
           <TokenPacksCarousel />
         </div>
