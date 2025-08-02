@@ -150,6 +150,9 @@ const questions = [
   }
 ];
 
+// Mock user token balance - in a real app, this would come from your user state/API
+const USER_TOKEN_BALANCE = 50; // Example: user has only 50 tokens (less than Tesla's 200 cost)
+
 export default function ContestEntryForm({ onSubmissionSuccess }) {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState({});
@@ -158,6 +161,7 @@ export default function ContestEntryForm({ onSubmissionSuccess }) {
   const [showSuccess, setShowSuccess] = useState(false);
   const [returnToSummary, setReturnToSummary] = useState(false);
   const [showSubmitModal, setShowSubmitModal] = useState(false);
+  const [userTokens, setUserTokens] = useState(USER_TOKEN_BALANCE);
   const formRef = useRef(null);
 
   const scrollToTop = () => {
