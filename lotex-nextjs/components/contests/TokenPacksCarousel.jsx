@@ -71,7 +71,7 @@ export default function TokenPacksCarousel({ onPurchaseComplete }) {
     // Simulate payment processing
     setTimeout(() => {
       setIsProcessing(false);
-      // Call the parent callback to handle the sealed message
+      // Call the parent callback to handle the sealed message and update token balance
       if (onPurchaseComplete) {
         onPurchaseComplete();
       }
