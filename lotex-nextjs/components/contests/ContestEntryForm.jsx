@@ -253,13 +253,13 @@ export default function ContestEntryForm({ onSubmissionSuccess }) {
   if (showSubmission) {
     return (
       <div className="contest-entry-form">
-        <div className="submission-screen">
-          <div className="submission-content">
+        <div className="contest-submission-screen">
+          <div className="contest-submission-content">
             <h3>Securing Your Entry...</h3>
-            <div className="padlock-animation">
-              <div className="padlock-placeholder">
+            <div className="contest-padlock-animation">
+              <div className="contest-padlock-placeholder">
                 <i className="icon-lock" style={{ fontSize: '4rem', color: '#ff6b35' }}></i>
-                <div className="loading-dots">
+                <div className="contest-loading-dots">
                   <span></span>
                   <span></span>
                   <span></span>
@@ -276,37 +276,37 @@ export default function ContestEntryForm({ onSubmissionSuccess }) {
   if (showSummary) {
     return (
       <div className="contest-entry-form">
-        <div className="question-container">
-          <div className="question-header">
-            <h2 className="question-title">Review Your Predictions</h2>
+        <div className="contest-question-container">
+          <div className="contest-question-header">
+            <h2 className="contest-summary-title">Review Your Predictions</h2>
           </div>
-          <div className="options-grid">
+          <div className="contest-summary-grid">
             {questions.map((question, index) => (
-              <button 
+              <div 
                 key={index} 
-                className="option-button"
+                className="contest-summary-item"
                 onClick={() => handleEdit(index)}
               >
-                <div className="option-text">
-                  <div className="question-number">Q{index + 1}: {question.question}</div>
-                  <div className="selected-answer">{answers[index + 1]?.text || 'No answer selected'}</div>
+                <div className="contest-summary-question-info">
+                  <div className="contest-summary-question-title">Q{index + 1}: {question.question}</div>
+                  <div className="contest-summary-answer-text">{answers[index + 1]?.text || 'No answer selected'}</div>
                 </div>
-                <div className="option-points">Edit</div>
-              </button>
+                <button className="contest-summary-edit-btn">Edit</button>
+              </div>
             ))}
           </div>
-          <div className="summary-total">
-            <h3>Total Score: {calculateTotalScore().toLocaleString()}</h3>
+          <div className="contest-summary-total">
+            <h4>Total Score: {calculateTotalScore().toLocaleString()}</h4>
           </div>
-          <div className="summary-actions">
+          <div className="contest-summary-actions">
             <button 
-              className="continue-editing-btn"
+              className="contest-continue-editing-btn"
               onClick={() => setShowSummary(false)}
             >
               Continue Editing
             </button>
             <button 
-              className="submit-btn"
+              className="contest-submit-btn"
               onClick={handleSubmit}
             >
               Submit Entry
@@ -319,44 +319,44 @@ export default function ContestEntryForm({ onSubmissionSuccess }) {
 
   return (
     <div className="contest-entry-form">
-      <div className="entry-header">
+      <div className="contest-entry-header">
         <h3>Contest Entry Form</h3>
-        <div className="progress-indicator">
+        <div className="contest-progress-indicator">
           <span>Question {currentQuestion + 1} of {questions.length}</span>
-          <div className="progress-bar">
+          <div className="contest-progress-bar">
             <div 
-              className="progress-fill"
+              className="contest-progress-fill"
               style={{ width: `${((currentQuestion + 1) / questions.length) * 100}%` }}
             ></div>
           </div>
         </div>
       </div>
 
-      <div className="question-container">
-        <div className="question-header">
+      <div className="contest-question-container">
+        <div className="contest-question-header">
           <h4>{currentQ.question}</h4>
-          <span className="question-type">{currentQ.type}</span>
+          <span className="contest-question-type">{currentQ.type}</span>
         </div>
 
-        <div className="options-grid">
+        <div className="contest-options-grid">
           {currentQ.options.map((option, index) => (
             <button
               key={index}
-              className={`option-button ${
+              className={`contest-option-button ${
                 isAnswered && isAnswered.optionIndex === index ? 'selected' : ''
               }`}
               onClick={() => handleAnswerSelect(currentQ.id, index, option.points)}
             >
-              <span className="option-text">{option.text}</span>
-                    <span className="option-points">{option.points}</span>
+              <span className="contest-option-text">{option.text}</span>
+              <span className="contest-option-points">{option.points}</span>
             </button>
           ))}
         </div>
 
-        <div className="navigation-buttons">
+        <div className="contest-navigation-buttons">
           {currentQuestion > 0 && (
             <button 
-              className="back-button"
+              className="contest-back-button"
               onClick={handlePrevious}
             >
               ← Back to Previous Question
@@ -364,404 +364,6 @@ export default function ContestEntryForm({ onSubmissionSuccess }) {
           )}
         </div>
       </div>
-
-      <style jsx>{`
-        .contest-entry-form {
-          background: #fff;
-          border-radius: 12px;
-          padding: 2rem;
-          margin: 2rem 0;
-          box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-        }
-
-        .entry-header {
-          text-align: center;
-          margin-bottom: 2rem;
-        }
-
-        .entry-header h3 {
-          color: #1a1a1a;
-          margin-bottom: 1rem;
-        }
-
-        .progress-indicator {
-          margin-bottom: 1rem;
-        }
-
-        .progress-indicator span {
-          display: block;
-          margin-bottom: 0.5rem;
-          color: #666;
-        }
-
-        .progress-bar {
-          width: 100%;
-          height: 8px;
-          background: #e0e0e0;
-          border-radius: 4px;
-          overflow: hidden;
-        }
-
-        .progress-fill {
-          height: 100%;
-          background: linear-gradient(90deg, #ff6b35, #f7931e);
-          transition: width 0.3s ease;
-        }
-
-        .question-container {
-          animation: slideIn 0.3s ease-in-out;
-        }
-
-        @keyframes slideIn {
-          from {
-            opacity: 0;
-            transform: translateX(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-
-        .question-header {
-          text-align: center;
-          margin-bottom: 2rem;
-        }
-
-        .question-header h4 {
-          color: #1a1a1a;
-          margin-bottom: 0.5rem;
-        }
-
-        .question-type {
-          background: #f0f0f0;
-          padding: 0.25rem 0.75rem;
-          border-radius: 20px;
-          font-size: 0.875rem;
-          color: #666;
-        }
-
-        .options-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-          gap: 1rem;
-          margin-bottom: 2rem;
-        }
-
-        .option-button {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 2rem 1.5rem;
-          border: none;
-          border-radius: 12px;
-          background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-          color: white;
-          cursor: pointer;
-          transition: all 0.3s ease;
-          box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-          min-height: 80px;
-        }
-
-        .option-button:hover {
-          transform: translateY(-3px);
-          box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-          background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
-        }
-
-        .option-button.selected {
-          background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
-          transform: translateY(-2px);
-          box-shadow: 0 6px 20px rgba(255, 107, 53, 0.3);
-        }
-
-        .option-text {
-          font-weight: 500;
-          color: white;
-          font-size: 1.1rem;
-        }
-
-         .option-points {
-          background: rgba(255, 255, 255, 0.2);
-          color: white;
-          padding: 0.75rem 1.25rem;
-          border-radius: 25px;
-          font-weight: 700;
-          font-size: 1.4rem;
-          backdrop-filter: blur(10px);
-          border: 1px solid rgba(255, 255, 255, 0.1);
-        } }
-
-        .option-button.selected .option-points {
-          background: rgba(255, 255, 255, 0.3);
-        }
-
-        .navigation-buttons {
-          display: flex;
-          justify-content: center;
-          margin-top: 2rem;
-        }
-
-        .back-button {
-          background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
-          color: white;
-          border: none;
-          padding: 1rem 2rem;
-          border-radius: 25px;
-          font-size: 1rem;
-          font-weight: 600;
-          cursor: pointer;
-          transition: all 0.3s ease;
-          box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-
-        .back-button:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-        }
-
-        .summary-modal {
-          position: fixed;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background: rgba(0, 0, 0, 0.8);
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          z-index: 1000;
-          padding: 2rem;
-        }
-
-        /* Hide tickets sold section specifically when summary is showing */
-        .summary-modal ~ .tickets-sold-section {
-          display: none !important;
-        }
-
-        .summary-content {
-          background: #0f1419;
-          border-radius: 20px;
-          padding: 3rem;
-          max-width: 1200px;
-          width: 100%;
-          max-height: 90vh;
-          overflow-y: auto;
-          position: relative;
-          border: 1px solid #2d3748;
-        }
-
-        .summary-title {
-          text-align: center;
-          color: white;
-          margin-bottom: 3rem;
-          font-size: 2.5rem;
-          font-weight: 700;
-        }
-
-        .summary-grid {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 1.5rem;
-          margin-bottom: 2rem;
-        }
-
-        .summary-item {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 2rem 1.5rem;
-          border: 1px solid #2d3748;
-          border-radius: 12px;
-          background: #1a202c;
-          color: white;
-          transition: all 0.3s ease;
-          box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-          min-height: 80px;
-        }
-
-        .summary-item:hover {
-          transform: translateY(-3px);
-          box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-          border-color: #4a5568;
-        }   .summary-question-info {
-          flex: 1;
-          margin-right: 1rem;
-          text-align: left;
-        }
-
-        .summary-question-title {
-          font-weight: 600;
-          color: #ff6b35;
-          font-size: 1rem;
-          margin-bottom: 0.25rem;
-        }
-
-        .summary-answer-text {
-          color: #a0aec0;
-          font-size: 0.9rem;
-          font-weight: 500;
-        }
-
-        .summary-edit-btn {
-          background: linear-gradient(135deg, #ff6b35, #f7931e);
-          color: white;
-          border: none;
-          padding: 0.75rem 1.5rem;
-          border-radius: 25px;
-          font-weight: 600;
-          font-size: 0.9rem;
-          cursor: pointer;
-          transition: all 0.3s ease;
-          min-width: 80px;
-          box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
-        }
-
-        .summary-edit-btn:hover {
-          background: linear-gradient(135deg, #e55a2b, #e8851a);
-          transform: translateY(-1px);
-          box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
-        }
-
-        .no-answer-item {
-          background: #fff3cd;
-          border-color: #ffeaa7;
-        }
-
-        .no-answer-item:hover {
-          background: #ffeaa7;
-        }
-
-        .no-answer-text {
-          color: #856404;
-          font-style: italic;
-        }
-
-        .summary-total {
-          text-align: center;
-          padding: 2rem;
-          background: #1a202c;
-          border: 1px solid #2d3748;
-          border-radius: 15px;
-          margin: 2rem 0;
-          box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-        }
-
-        .summary-total h4 {
-          color: #ff6b35;
-          font-size: 2.5rem;
-          font-weight: 800;
-          margin: 0;
-        }
-
-        .summary-actions {
-          display: flex;
-          gap: 1.5rem;
-          justify-content: center;
-          flex-wrap: wrap;
-        }
-
-        .summary-actions button {
-          padding: 1rem 2rem;
-          border: none;
-          border-radius: 25px;
-          font-size: 1.1rem;
-          font-weight: 600;
-          cursor: pointer;
-          transition: all 0.3s ease;
-          min-width: 180px;
-        }
-
-        .summary-actions .tf-button.style-2 {
-          background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
-          color: white;
-          box-shadow: 0 4px 15px rgba(108, 117, 125, 0.3);
-        }
-
-        .summary-actions .tf-button.style-1 {
-          background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
-          color: white;
-          box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
-        }
-
-        .summary-actions button:hover {
-          transform: translateY(-3px);
-          box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-        }
-
-        .summary-actions button:disabled {
-          opacity: 0.6;
-          cursor: not-allowed;
-          transform: none;
-        }
-
-        .submission-screen, .success-screen {
-          text-align: center;
-          padding: 3rem 2rem;
-        }
-
-        .submission-content, .success-content {
-          max-width: 400px;
-          margin: 0 auto;
-        }
-
-        .padlock-animation {
-          margin: 2rem 0;
-        }
-
-        .padlock-placeholder {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 1rem;
-        }
-
-        .loading-dots {
-          display: flex;
-          gap: 0.5rem;
-        }
-
-        .loading-dots span {
-          width: 8px;
-          height: 8px;
-          border-radius: 50%;
-          background: #ff6b35;
-          animation: bounce 1.4s ease-in-out infinite both;
-        }
-
-        .loading-dots span:nth-child(1) { animation-delay: -0.32s; }
-        .loading-dots span:nth-child(2) { animation-delay: -0.16s; }
-
-        @keyframes bounce {
-          0%, 80%, 100% {
-            transform: scale(0);
-          }
-          40% {
-            transform: scale(1);
-          }
-        }
-
-        .success-icon {
-          margin-bottom: 1rem;
-        }
-
-        @media (max-width: 768px) {
-          .options-grid {
-            grid-template-columns: 1fr;
-          }
-          
-          .navigation-buttons {
-            flex-direction: column;
-          }
-          
-          .summary-answer {
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 0.5rem;
-          }
-        }
-      `}</style>
     </div>
   );
 }
-
